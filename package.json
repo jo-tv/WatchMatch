@@ -1,0 +1,26 @@
+{
+  "name": "newproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "m3u-parser": "^1.0.3",
+    "moment": "^2.30.1",
+    "mongoose": "^8.9.5",
+    "uuid": "^11.0.5"
+  }
+}

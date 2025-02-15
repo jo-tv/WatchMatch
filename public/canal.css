@@ -1,0 +1,231 @@
+body {
+    width: 100%;
+    font-family: "Tajawal", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 95%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e50914;
+    margin: 0;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 15px;
+    max-width: 250px;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+}
+
+.channels-container {
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.channel-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.3s,
+        background-color 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.channel-card:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.channel-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.channel-card .channel-name {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    color: #333;
+    width: 100%;
+    min-height: 2.4em;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.loading {
+    text-align: center;
+    margin: 15px 0;
+    color: #e50914;
+    font-size: 1.1rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .channels-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .header {
+        padding: 12px;
+    }
+
+    .search-bar {
+        margin: 8px 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .channels-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .channel-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .channel-card .channel-name {
+        font-size: 0.9rem;
+    }
+}
+/* From Uiverse.io by JaydipPrajapati1910 */
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border: none;
+    background: #fff;
+    z-index: 1;
+}
+
+.c-button--gooey {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 0;
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: black;
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+}

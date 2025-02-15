@@ -1,0 +1,50 @@
+
+#EXTINF:-1 tvg-id="BEIN NEWS SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS SD
+https://google-com-globle.koyeb.app/stream/428239.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 LQ
+http://het108a.4rouwanda-shop.store/live/978480008877005/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 2SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 LQ
+http://het103a.4rouwanda-shop.store/live/10011244/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 3 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 3 LQ
+http://het104a.4rouwanda-shop.store/live/551818447/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 4 LQ
+http://het110a.4rouwanda-shop.store/live/131326625/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 5 LQ
+http://het106a.4rouwanda-shop.store/live/181818444/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 6 LQ
+http://het100a.4rouwanda-shop.store/live/9883322/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 7 SD
+https://google-app-cookies-cool.onrender.com/stream/1469
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 8 LQ
+http://het110a.4rouwanda-shop.store/live/770001000/index.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 9 SD
+https://google-com-globle.koyeb.app/stream/428249.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 1
+https://google-com-globle.koyeb.app/stream/428250.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 2
+https://google-com-globle.koyeb.app/stream/428251.ts
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 3 
+https://google-com-globle.koyeb.app/stream/428252.ts

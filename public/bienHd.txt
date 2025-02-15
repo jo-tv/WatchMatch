@@ -1,0 +1,60 @@
+
+
+#EXTINF:-1 tvg-id="BEIN NEWS HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS HD
+https://google-com-globle.koyeb.app/stream/140932.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 HD
+https://google-com-globle.koyeb.app/stream/5
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 2 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 HD
+https://google-com-globle.koyeb.app/stream/140922.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 3 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 3 HD
+https://google-com-globle.koyeb.app/stream/140923.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 4 HD
+https://google-com-globle.koyeb.app/stream/140924.ts
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 5 HD
+https://google-com-globle.koyeb.app/stream/140925.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 6 HD
+https://google-com-globle.koyeb.app/stream/140926.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 7 HD
+https://google-com-globle.koyeb.app/stream/140927.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 8 HD
+https://google-com-globle.koyeb.app/stream/140928.ts
+
+
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 9 HD
+https://google-app-cookies-cool.onrender.com/stream/1467.ts
+
+
+#EXTINF:-1 tvg-id="BEIN XTRA 1 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 1 HD
+http://mutant.arrox.top/live/oWg8mm2z2/C1LwyPEFOj/140929.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN XTRA 2 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 2 HD
+http://mutant.arrox.top/live/oWg8mm2z2/C1LwyPEFOj/428235.m3u8
+
+
+#EXTINF:-1 tvg-id="BEIN XTRA 2 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 3 HD
+http://mutant.arrox.top/live/oWg8mm2z2/C1LwyPEFOj/428236.m3u8
+
+
+#EXTINF:-1 tvg-id="beIN NBA HD" tvg-logo="https://i.postimg.cc/ry5mCNv6/images-1.jpg"  ,beIN NBA HD
+https://starshare.live:443/live/Brandon101/Brandon101/274198.ts
+
+
+
+
+

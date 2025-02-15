@@ -1,0 +1,106 @@
+// إنشاء عنصر لعرض رسالة عدم الاتصال
+const offlineMessage = document.createElement('div');
+offlineMessage.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ff4444;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    z-index: 9999;
+    display: none;
+    direction: rtl;
+`;
+offlineMessage.textContent = "لا يتوفر اتصال بالإنترنت. يرجى التحقق من الشبكة الخاصة بك.";
+document.body.appendChild(offlineMessage);
+
+// إنشاء عنصر لعرض رسالة أن الصفحة غير متاحة
+const pageNotAvailableMessage = document.createElement('div');
+pageNotAvailableMessage.style.cssText = offlineMessage.style.cssText; // نسخ نفس التصميم
+pageNotAvailableMessage.textContent = "هذه الصفحة غير متاحة حاليًا.";
+document.body.appendChild(pageNotAvailableMessage);
+
+// دالة فحص الاتصال الفعلي بالإنترنت
+async function checkRealInternetConnection() {
+    try {
+        // محاولة الوصول إلى موقع موثوق (مثل جوجل)
+        const response = await fetch('https://www.google.com', { method: 'HEAD', mode: 'no-cors' });
+        return response.ok; // إرجاع true إذا كان هناك اتصال حقيقي
+    } catch (error) {
+        return false; // إذا فشل الاتصال، نعتبر أن الإنترنت غير متاح
+    }
+}
+
+// دالة فحص توفر الصفحة
+async function isPageAvailable(url) {
+    try {
+        const response = await fetch(url, { method: "HEAD" });
+        return response.ok; // إرجاع true إذا كانت الصفحة متاحة
+    } catch (error) {
+        return false; // إذا فشل الطلب، نعتبر أن الصفحة غير متاحة
+    }
+}
+
+// دالة فحص الإنترنت قبل التنقل
+async function checkInternetBeforeNavigate(url, event) {
+    const isOnline = await checkRealInternetConnection(); // تحقق من الاتصال الفعلي بالإنترنت
+    if (!isOnline) {
+        if (event) event.preventDefault(); // منع التنقل إذا لم يكن هناك اتصال
+        offlineMessage.style.display = 'block'; // عرض رسالة لا يوجد إنترنت
+        setTimeout(() => { offlineMessage.style.display = 'none'; }, 3000); // إخفاء الرسالة بعد 3 ثواني
+        return false;
+    }
+
+    // تحقق من توفر الصفحة
+    const available = await isPageAvailable(url);
+    if (!available) {
+        if (event) event.preventDefault(); // منع التنقل إذا كانت الصفحة غير متاحة
+        pageNotAvailableMessage.style.display = 'block'; // عرض رسالة أن الصفحة غير متاحة
+        setTimeout(() => { pageNotAvailableMessage.style.display = 'none'; }, 3000); // إخفاء الرسالة بعد 3 ثواني
+        document.querySelectorAll(`a[href="${url}"]`).forEach(link => link.style.display = 'none'); // إخفاء الرابط
+        return false;
+    }
+
+    return true; // إذا كانت الصفحة متاحة وهناك اتصال حقيقي، السماح بالتنقل
+}
+
+// حماية الروابط
+function protectLinks() {
+    document.querySelectorAll('a').forEach(link => {
+        if (!link.hasAttribute('data-protected')) {
+            link.setAttribute('data-protected', 'true');
+            
+            // إضافة مستمع حدث للنقر على كل رابط
+            link.addEventListener('click', async function (e) {
+                return await checkInternetBeforeNavigate(this.href, e); // التحقق من الاتصال قبل التنقل
+            });
+
+            // التحقق من توفر الصفحة فورًا
+            isPageAvailable(link.href).then(available => {
+                if (!available) {
+                    link.style.display = 'none'; // إخفاء الرابط إذا كانت الصفحة غير متاحة
+                }
+            });
+        }
+    });
+}
+
+// مراقبة التغييرات في DOM للروابط الجديدة
+const observer = new MutationObserver(() => protectLinks());
+observer.observe(document.body, { childList: true, subtree: true });
+
+// مراقبة حالة الاتصال
+window.addEventListener('online', () => {
+    offlineMessage.style.display = 'none'; // إخفاء رسالة لا يوجد إنترنت إذا كان هناك اتصال
+});
+window.addEventListener('offline', () => {
+    offlineMessage.style.display = 'block'; // عرض رسالة لا يوجد إنترنت إذا تم قطع الاتصال
+});
+
+// التطبيق الأولي عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    protectLinks();
+});

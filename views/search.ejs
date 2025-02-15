@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>البحث عن القنوات</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 20px;
+      color: #333;
+    }
+    form {
+      margin: 20px auto;
+      max-width: 400px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    td button {
+      background-color: #28a745;
+      margin: 0 5px;
+    }
+    td button:hover {
+      background-color: #218838;
+    }
+    p {
+      margin-top: 10px;
+      color: red;
+    }
+    .suggestions {
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: left;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .suggestions div {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+    }
+    .suggestions div:last-child {
+      border-bottom: none;
+    }
+    .suggestions div:hover {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <h1>البحث عن رابط قناة</h1>
+<form method="POST" action="/search">
+  <label for="channelName">اسم القناة:</label>
+  <input type="text" id="channelName" name="channelName" autocomplete="off" value="<%= query || '' %>">
+  <button type="submit">بحث</button>
+  <div id="suggestions" class="suggestions">
+    <% (suggestions || []).forEach(name => { %>
+      <div onclick="selectSuggestion('<%= name %>')"><%= name %></div>
+    <% }); %>
+  </div>
+</form>
+
+<% if (error) { %>
+  <p style="color: red;"><%= error %></p>
+<% } %>
+
+<% if (query && result) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>اسم القناة</th>
+        <th>رابط القناة</th>
+        <th>نسخ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= result.name %></td>
+        <td><a href="<%= result.url %>" target="_blank"><%= result.url %></a></td>
+        <td>
+          <button onclick="copyToClipboard('<%= result.url %>')">نسخ الرابط</button>
+          <button onclick="copyToClipboard('<%= result.name %>')">نسخ الاسم</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% } %>
+
+  <script>
+    function selectSuggestion(name) {
+      document.getElementById("channelName").value = name;
+      document.getElementById("suggestions").innerHTML = "";
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("تم النسخ: " + text);
+      }).catch(err => {
+        console.error("خطأ أثناء النسخ:", err);
+      });
+    }
+  </script>
+    <script src="./tcheck.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# تجاهل مجلد node_modules
+node_modules/
+table222.ejs/
+index2.ejs/
+app1.js/
+app.3.js/
+# تجاهل ملفات السجلات
+*.log
+logs/
+npm-debug.log*
+
+# تجاهل ملفات البيئة
+.env
+.env.local
+
+# تجاهل المجلدات المخرجة للبناء
+dist/
+build/
+
+# تجاهل ملفات النظام
+.DS_Store
+Thumbs.db
+
+# تجاهل إعدادات IDE أو المحررات
+.idea/
+.vscode/
+
+# تجاهل التقارير والملفات المؤقتة
+coverage/
+tmp/
+*.tmp

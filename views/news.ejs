@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="canal.css" />
+        <script
+            src="https://kit.fontawesome.com/fb67a05d46.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>مشغل IPTV</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+                <!-- From Uiverse.io by JaydipPrajapati1910 -->
+                <button class="c-button c-button--gooey">
+                    <i class="fa-solid fa-arrow-left"></i> Menu
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+                <svg
+                    style="display: block; height: 0; width: 0"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur
+                                result="blur"
+                                stdDeviation="10"
+                                in="SourceGraphic"
+                            ></feGaussianBlur>
+                            <feColorMatrix
+                                result="goo"
+                                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                mode="matrix"
+                                in="blur"
+                            ></feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="ابحث عن قناة..." />
+            </div>
+        </div>
+
+        <div class="channels-container" id="channels-container">
+            <div class="loading" id="loading">جاري تحميل القنوات...</div>
+        </div>
+
+        <script>
+            document.querySelector("button").addEventListener("click", () =>
+                setTimeout(() => {
+                    window.location.href = "go:TABLEAU";
+                }, 1000)
+            );
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const channelsContainer =
+                    document.getElementById("channels-container");
+                const searchInput = document.getElementById("search");
+                const loading = document.getElementById("loading");
+                const canalFile = "news.txt"; // اسم الملف المحلي
+
+                function loadChannels() {
+                    fetch(canalFile)
+                        .then(response => response.text())
+                        .then(data => {
+                            const channels = parseM3U(data);
+                            displayChannels(channels);
+                        })
+                        .catch(error =>
+                            console.error("Error loading channels:", error)
+                        );
+                }
+
+                function parseM3U(data) {
+                    const lines = data.split("\n");
+                    const channels = [];
+                    let currentChannel = {};
+
+                    lines.forEach(line => {
+                        line = line.trim();
+                        if (line.startsWith("#EXTINF:")) {
+                            const match = line.match(/tvg-logo="(.*?)"/);
+                            currentChannel.logo = match ? match[1] : "";
+                            currentChannel.name =
+                                line.split(",")[1] || "قناة غير معروفة";
+                        } else if (line && !line.startsWith("#")) {
+                            currentChannel.url = line;
+                            channels.push(currentChannel);
+                            currentChannel = {};
+                        }
+                    });
+
+                    return channels;
+                }
+
+                function displayChannels(channels) {
+                    loading.style.display = "none";
+                    channelsContainer.innerHTML = "";
+
+                    channels.forEach(channel => {
+                        const card = document.createElement("div");
+                        card.className = "channel-card";
+                        card.innerHTML = `
+                            <img src="${channel.logo}" alt="${channel.name}">
+                            <div class="channel-name">${channel.name}</div>
+                        `;
+                        card.addEventListener("click", () =>
+                            openInXPolaPlayer(channel.url)
+                        );
+                        channelsContainer.appendChild(card);
+                    });
+                }
+
+                function openInXPolaPlayer(url) {
+                    const packageName = "com.xpola.player";
+                    const intentUrl = `intent:${url}#Intent;package=${packageName};type=video/*;end`;
+
+                    try {
+                        window.location.href = intentUrl;
+                    } catch {
+                        alert("يرجى تثبيت XPola Player لتشغيل هذا الرابط.");
+                        window.location.href = `https://play.google.com/store/apps/details?id=${packageName}`;
+                    }
+                }
+
+                searchInput.addEventListener("input", () => {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const cards = document.querySelectorAll(".channel-card");
+                    cards.forEach(card => {
+                        const name = card
+                            .querySelector(".channel-name")
+                            .textContent.toLowerCase();
+                        card.style.display = name.includes(searchTerm)
+                            ? "block"
+                            : "none";
+                    });
+                });
+
+                loadChannels();
+            });
+        </script>
+        <script src="./tcheck.js"></script>
+    </body>
+</html>

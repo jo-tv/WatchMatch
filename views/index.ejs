@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8668113601332915"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <style>
+    img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
+    .no-matches {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh; /* يضمن أن الرسالة تكون في منتصف الصفحة عموديًا */
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  background-color: #f9f9f9; /* يمكنك تخصيص اللون الخلفي */
+}
+
+.no-matches p {
+  background-color: #fff;
+  padding: 20px;
+  font-weight: 900;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 90%;
+  margin-top: 30px;
+  text-shadow: -2px -1px 12px rgba(66, 71, 90, 1);
+}
+  </style>
+  <link rel="stylesheet" href="/style.css"/>
+  <title>match-live</title>
+</head>
+<body class="rtl home blog yalla-style-1 theme--AlbaYallaShoot">
+  <header id="AYaHeader">
+    <div class="HdrInner"></div>
+  </header>
+  <div id="SiteContent" class="container">
+    <div class="main-wrapp">
+      <div class="tmz-name"><span>بتوقيت المغرب</span></div>
+      <div class="AY_Block AY-Fixture">
+        <div class="AYb_Head fx-wrap">
+          <h2 class="aya-btn"><strong>جدول المباريات</strong></h2>
+        </div>
+     <% if (matches && matches.length > 0) { %>
+     <div id="ayala-" class="albaflex active">
+      <% matches.forEach(match => { %>
+              <div class="AY_Match not-started">
+                <div class="AY_Inner">
+                  <div class="MT_Team TM1">
+                    <div class="TM_Logo">
+                      <img alt="<%= match.logo1 %>" data-src="<%= match.logo1 %>" width="70" height="70" class="hqy-lazy hqy-loaded" src="<%= match.logo1 %>" loading="lazy">
+                    </div>
+                    <div class="TM_Name"><%= match.team1 %></div>
+                  </div>
+                  <div class="MT_Data">
+                    <span class="MT_Time"><%= match.time %></span>
+                    <span class="MT_Result"><span class="RS-goals">0</span><span>-</span><span class="RS-goals">0</span></span>
+                    <div class="MT_Stat"><%= match.status %></div>
+                  </div>
+                  <div class="MT_Team TM2">
+                    <div class="TM_Logo">
+                      <img alt="<%= match.team2 %>" data-src="<%= match.logo2 %>" width="70" height="70" class="hqy-lazy hqy-loaded" src="<%= match.logo2 %>" loading="lazy">
+                    </div>
+                    <div class="TM_Name"><%= match.team2 %></div>
+                  </div>
+                </div>
+                <div class="MT_Info">
+                  <ul>
+                    <li><span><%= match.moaalik %></span></li>
+                    <li><span>غير معروف</span></li>
+                    <li><span><%= match.competition %></span></li>
+                  </ul>
+                </div>
+                <a onclick="openInXPolaPlayer('<%= match.link %>')" style="cursor: pointer;">
+                  <div class="MT_Mask">
+                    <div class="MT_MaskText" style="backgroind:red"></div>
+                  </div>
+                </a>
+              </div>
+      <% }); %>
+     </div>
+     <% } else { %>
+     <div class="no-matches">
+      <p>لا توجد مباريات اليوم.</p>
+     </div>
+     <% } %>
+        <!-- إذا كانت المباريات فارغة، يتم إخفاء المحتوى وعرض رسالة "لا توجد مباريات اليوم" -->
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-border-top"></div>
+    <div class="img">
+      <img src="https://i.postimg.cc/7PNZQv88/pngtree-man-apologising-illustration-vector-on-white-background-png-image-2078699.jpg">
+    </div>
+    <span> المرجوا الانتظار</span>
+    <p class="job"> نعتذر عن أي إزعاج، الرابط غير متاح حاليًا، وسنعمل على تحديثه في أقرب وقت. شكرًا لتفهمكم.</p>
+    <button class="close"> إغلاق </button>
+  </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8668113601332915"
+     crossorigin="anonymous"></script>
+<!-- Carré -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8668113601332915"
+     data-ad-slot="2604962203"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  <script>
+    let card = document.querySelector(".card");
+    let close = document.querySelector(".close");
+
+    function openInXPolaPlayer(videoUrl) {
+  if (!videoUrl || videoUrl === "رابط غير متوفر") {
+    // عرض رسالة إذا لم يتم تقديم رابط فيديو
+    let card = document.querySelector(".card");
+    if (card) {
+      card.style.display = "block";
+    }
+    return;
+  }
+
+  // إعداد الروابط
+  const packageName = "com.xpola.player"; // استبدل باسم الحزمة الصحيح
+  const fallbackUrl = `https://play.google.com/store/apps/details?id=${packageName}`;
+  const intentUrl = `intent:${videoUrl}#Intent;package=${packageName};type=video/*;end`;
+
+  // محاولة فتح التطبيق باستخدام iframe
+  const iframe = document.createElement("iframe");
+  iframe.style.display = "none";
+  iframe.src = intentUrl;
+  document.body.appendChild(iframe);
+
+  // متغيرات للتحكم
+  let opened = false;
+  let timeout;
+
+  // وظيفة إنهاء المحاولة وتنظيف الموارد
+  const cleanup = () => {
+    if (timeout) clearTimeout(timeout); // إلغاء العد التنازلي
+    if (iframe) document.body.removeChild(iframe); // تنظيف iframe
+    window.removeEventListener("visibilitychange", visibilityHandler); // إزالة المستمع
+  };
+
+  // التحقق من تغييرات الرؤية (المستخدم غادر التطبيق أو النافذة)
+  const visibilityHandler = () => {
+    if (document.visibilityState === "hidden") {
+      opened = true; // المستخدم غادر التطبيق
+      cleanup(); // تنظيف
+    }
+  };
+
+  // إضافة مستمع لتغير حالة الرؤية
+  window.addEventListener("visibilitychange", visibilityHandler);
+
+  // بدء عداد زمني لتوجيه المستخدم إلى Google Play إذا لم يتم فتح التطبيق
+  timeout = setTimeout(() => {
+    if (!opened) {
+      window.location.href = fallbackUrl; // توجيه إلى Google Play
+    }
+    cleanup(); // تنظيف بعد انتهاء المهلة
+  }, 1000);
+}
+
+// إغلاق البطاقة إذا لم يتم إدخال رابط
+document.querySelector(".close").onclick = function () {
+  let card = document.querySelector(".card");
+  if (card) card.style.display = "none";
+};
+
+// إغلاق البطاقة إذا لم يتم إدخال رابط
+document.querySelector(".close").onclick = function () {
+  let card = document.querySelector(".card");
+  if (card) card.style.display = "none";
+};
+    // إغلاق البطاقة إذا لم يتم إدخال رابط
+    close.onclick = function () {
+      card.style.display = "none";
+    };
+
+  </script>
+  <script src="./tcheck.js"></script>
+</body>
+</html>
