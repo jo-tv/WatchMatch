@@ -1,6 +1,6 @@
 
 #EXTINF:-1 tvg-id="BEIN NEWS SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS SD
-https://google-com-globle.koyeb.app/stream/428239.ts
+http://sapphireapp.xyz:8080/jsdaniels74/1836272615/12547
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 SD
