@@ -4,7 +4,7 @@ https://google-com-globle.koyeb.app/stream/428239.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 LQ
-http://het108a.4rouwanda-shop.store/live/978480008877005/index.m3u8
+http://het117a.4rouwanda-shop.store/live/978480008877005/index.m3u8
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 2SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 LQ
