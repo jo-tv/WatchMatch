@@ -1,92 +1,92 @@
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="53" tvg-name="AD Sports Premium 1ᴴᴰ" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports Premium 1ᴴᴰ
-https://very-fina-josef-b3438143.koyeb.app/stream/32
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/32
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="54" tvg-name="AD Sports Premium 2ᴴᴰ" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports Premium 2ᴴᴰ
-https://very-fina-josef-b3438143.koyeb.app/stream/33
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/33
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="55" tvg-name="AD Sports Asia 1"tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports Asia 1
-https://very-fina-josef-b3438143.koyeb.app/stream/34
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/34
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="56" tvg-name="AD Sports Asia 2" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports Asia 2
-https://very-fina-josef-b3438143.koyeb.app/stream/35
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/35
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="58" tvg-name="AD Sports 1" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports 1
-https://very-fina-josef-b3438143.koyeb.app/stream/37
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/37
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9qeBggGSrvThhNKBko35hvsdLqdftvqFD4bJAWz1NA&amp;s" CUID="59" tvg-name="AD Sports 2" group-title="AD| STARZ PLAY SPORTS قنوات ابوظبي الرياضية",AD Sports 2
-https://very-fina-josef-b3438143.koyeb.app/stream/38
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/38
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="60" tvg-name="SSC News HD" group-title="SSC SPORTS اس اس سي",SSC News HD
-https://very-fina-josef-b3438143.koyeb.app/stream/39
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/39
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="61" tvg-name="SSC HD1" group-title="SSC SPORTS اس اس سي",SSC HD1
-https://very-fina-josef-b3438143.koyeb.app/stream/40
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/40
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="62" tvg-name="SSC HD2" group-title="SSC SPORTS اس اس سي",SSC HD2
-https://very-fina-josef-b3438143.koyeb.app/stream/41
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/41
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="63" tvg-name="SSC HD3" group-title="SSC SPORTS اس اس سي",SSC HD3
-https://very-fina-josef-b3438143.koyeb.app/stream/42
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/42
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="64" tvg-name="SSC HD4" group-title="SSC SPORTS اس اس سي",SSC HD4
-https://very-fina-josef-b3438143.koyeb.app/stream/43|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/43|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="65" tvg-name="SSC HD5" group-title="SSC SPORTS اس اس سي",SSC HD5
-https://very-fina-josef-b3438143.koyeb.app/stream/44|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/44|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="66" tvg-name="SSC Extra 1 HD" group-title="SSC SPORTS اس اس سي",SSC Extra 1 HD
-https://very-fina-josef-b3438143.koyeb.app/stream/45|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/45|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="67" tvg-name="SSC Extra 2 HD" group-title="SSC SPORTS اس اس سي",SSC Extra 2 HD
-https://very-fina-josef-b3438143.koyeb.app/stream/46|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/46|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rnXSBUFXqQECPiCzF4fNoRjD51YLPfqrqw&amp;s" CUID="68" tvg-name="SSC Extra 3 HD" group-title="SSC SPORTS اس اس سي",SSC Extra 3 HD
-https://very-fina-josef-b3438143.koyeb.app/stream/47|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/47|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7f/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D9%88%D8%A7%D8%AA_%D8%A7%D9%84%D9%83%D8%AA%D8%B3.jpg" CUID="69" tvg-name="Al Kass Sports 1" group-title="Arabic Sports القنوات العربية الرياضية",Al Kass Sports 1
-https://very-fina-josef-b3438143.koyeb.app/stream/69|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/69|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7f/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D9%88%D8%A7%D8%AA_%D8%A7%D9%84%D9%83%D8%AA%D8%B3.jpg" CUID="70" tvg-name="Al Kass Sports 2" group-title="Arabic Sports القنوات العربية الرياضية",Al Kass Sports 2
-https://very-fina-josef-b3438143.koyeb.app/stream/70|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/70|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7f/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D9%88%D8%A7%D8%AA_%D8%A7%D9%84%D9%83%D8%AA%D8%B3.jpg" CUID="71" tvg-name="Al Kass Sports 3" group-title="Arabic Sports القنوات العربية الرياضية",Al Kass Sports 3
-https://very-fina-josef-b3438143.koyeb.app/stream/71|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/71|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/7f/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D9%88%D8%A7%D8%AA_%D8%A7%D9%84%D9%83%D8%AA%D8%B3.jpg" CUID="72" tvg-name="Al Kass Sports 4" group-title="Arabic Sports القنوات العربية الرياضية",Al Kass Sports 4
-https://very-fina-josef-b3438143.koyeb.app/stream/72|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/72|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWQsYvFBtARNmy2rpR6hRr8-5T7YO5WlOzA&amp;usqp=CAU" CUID="73" tvg-name="Dubai Sports 1" group-title="Arabic Sports القنوات العربية الرياضية",Dubai Sports 1
-https://very-fina-josef-b3438143.koyeb.app/stream/73|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/73|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWQsYvFBtARNmy2rpR6hRr8-5T7YO5WlOzA&amp;usqp=CAU" CUID="74" tvg-name="Dubai Sports 2" group-title="Arabic Sports القنوات العربية الرياضية",Dubai Sports 2
-https://very-fina-josef-b3438143.koyeb.app/stream/74|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/74|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReWQsYvFBtARNmy2rpR6hRr8-5T7YO5WlOzA&amp;usqp=CAU" CUID="75" tvg-name="Dubai Sports 3" group-title="Arabic Sports القنوات العربية الرياضية",Dubai Sports 3
-https://very-fina-josef-b3438143.koyeb.app/stream/75|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/75|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQegF2dIfdZx_s77O5v8wKoVmg0vy5zsTaCGg&amp;s" CUID="76" tvg-name="Sharjah Sports" group-title="Arabic Sports القنوات العربية الرياضية",Sharjah Sports
-https://very-fina-josef-b3438143.koyeb.app/stream/76|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/76|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://img.kooora.com/?i=logo_sport%2Fomansport.jpg" CUID="77" tvg-name="Oman Sports" group-title="Arabic Sports القنوات العربية الرياضية",Oman Sports
-https://very-fina-josef-b3438143.koyeb.app/stream/77|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/77|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://img.freepik.com/premium-vector/bahrain-football-with-bahrain-flag-world-map-them-isolated-white-background_1312565-60.jpg" CUID="78" tvg-name="Bahrain Sport 1" group-title="Arabic Sports القنوات العربية الرياضية",Bahrain Sport1
-https://very-fina-josef-b3438143.koyeb.app/stream/78|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/78|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://img.freepik.com/premium-vector/bahrain-football-with-bahrain-flag-world-map-them-isolated-white-background_1312565-60.jpg" CUID="79" tvg-name="Bahrain Sport 2" group-title="Arabic Sports القنوات العربية الرياضية",Bahrain Sport 2
-https://very-fina-josef-b3438143.koyeb.app/stream/79|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/79|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://www.web24iptv.online/img/jordan/jorsport.webp" CUID="80" tvg-name="Jordan Sport" group-title="Arabic Sports القنوات العربية الرياضية",Jordan Sport
-https://very-fina-josef-b3438143.koyeb.app/stream/80|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/80|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOm5i-fkQYnjug9y4Bmd1nZBcdnOzmX2uFAw&amp;s" CUID="81" tvg-name="ON SPORTS 1" group-title="Arabic Sports القنوات العربية الرياضية",ON SPORTS 1
-https://very-fina-josef-b3438143.koyeb.app/stream/81|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/81|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOm5i-fkQYnjug9y4Bmd1nZBcdnOzmX2uFAw&amp;s" CUID="82" tvg-name="ON SPORTS 2" group-title="Arabic Sports القنوات العربية الرياضية",ON SPORTS 2
-https://very-fina-josef-b3438143.koyeb.app/stream/82|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/82|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRATHTWlCy49r3IyHocDhv9NLUoCHizRaZC3w&amp;s" CUID="83" tvg-name="Nile Sport" group-title="Arabic Sports القنوات العربية الرياضية",Nile Sport
-https://very-fina-josef-b3438143.koyeb.app/stream/83|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/83|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157
 
 #EXTINF:0 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Logo%2Barryadia%2Bmorocco.png/800px-Logo%2Barryadia%2Bmorocco.png" CUID="84" tvg-name="Arryadia" group-title="Arabic Sports القنوات العربية الرياضية",Arryadia
 http://mo3ad.xyz/RT9JUfZ5yX/EUFmu5z4cU/148|user-agent=1737329157?token=ei5vrk5hqvn&expires=1737329157

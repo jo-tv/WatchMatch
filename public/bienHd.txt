@@ -1,42 +1,42 @@
 
 
 #EXTINF:-1 tvg-id="BEIN NEWS HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS HD
-https://googleserver-cqxw.onrender.com/stream/140932.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140932.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 HD
-https://googleserver-cqxw.onrender.com/stream/5
+https://googleserver-cqxw.onrender.com/josef/stream/5
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 2 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 HD
-https://googleserver-cqxw.onrender.com/stream/140922.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140922.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 3 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 3 HD
-https://googleserver-cqxw.onrender.com/stream/140923.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140923.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 4 HD
-https://googleserver-cqxw.onrender.com/stream/140924.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140924.ts
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 5 HD
-https://googleserver-cqxw.onrender.com/stream/140925.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140925.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 6 HD
-https://googleserver-cqxw.onrender.com/stream/140926.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140926.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 7 HD
-https://googleserver-cqxw.onrender.com/stream/140927.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140927.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 8 HD
-https://googleserver-cqxw.onrender.com/stream/140928.ts
+https://googleserver-cqxw.onrender.com/josef/stream/140928.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 9 HD
-https://google-app-cookies-cool.onrender.com/stream/1467.ts
+https://google-app-cookies-cool.onrender.com/josef/stream/1467.ts
 
 
 #EXTINF:-1 tvg-id="BEIN XTRA 1 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 1 HD

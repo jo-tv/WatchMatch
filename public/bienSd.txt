@@ -4,47 +4,47 @@ http://sapphireapp.xyz:8080/jsdaniels74/1836272615/12547
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 SD
-https://very-fina-josef-b3438143.koyeb.app/stream/1472
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/1472
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 2 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 SD
-https://very-fina-josef-b3438143.koyeb.app/stream/1474
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/1474
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 3 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 3 SD
-https://google-com-globle.koyeb.app/stream/428243.ts
+https://google-com-globle.koyeb.app/josef/stream/428243.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 4 SD
-https://google-com-globle.koyeb.app/stream/428244.ts
+https://google-com-globle.koyeb.app/josef/stream/428244.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 5 SD
-https://very-fina-josef-b3438143.koyeb.app/stream/1471
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/1471
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 6 SD
-https://very-fina-josef-b3438143.koyeb.app/stream/1470
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/1470
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 7 SD
-https://very-fina-josef-b3438143.koyeb.app/stream/1469
+https://very-fina-josef-b3438143.koyeb.app/josef/stream/1469
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 8 SD
-https://google-com-globle.koyeb.app/stream/428248.ts
+https://google-com-globle.koyeb.app/josef/stream/428248.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 9 SD
-https://google-com-globle.koyeb.app/stream/428249.ts
+https://google-com-globle.koyeb.app/josef/stream/428249.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 1
-https://google-com-globle.koyeb.app/stream/428250.ts
+https://google-com-globle.koyeb.app/josef/stream/428250.ts
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 2
-https://google-com-globle.koyeb.app/stream/428251.ts
+https://google-com-globle.koyeb.app/josef/stream/428251.ts
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 3 
-https://google-com-globle.koyeb.app/stream/428252.ts
+https://google-com-globle.koyeb.app/josef/stream/428252.ts
