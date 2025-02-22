@@ -159,7 +159,6 @@ const fallbackUrl = `https://play.google.com/store/apps/details?id=${packageName
 // تنظيف بعد مدة معينة إذا لم يتم فتح التطبيق
 timeout = setTimeout(() => {
     if (!opened) {
-        alert("تعذر فتح XPola Player. تأكد من تثبيته على جهازك.");
       window.location.href = fallbackUrl; // توجيه إلى Google Pla
         cleanup();
     }
