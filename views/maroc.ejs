@@ -121,29 +121,51 @@
                 }
                 
                 function openInXPolaPlayer(url) { 
-                 const packageName = "com.xpola.player"; 
-                 const intentUrl = `intent:${url}#Intent;package=${packageName};type=video/*;end`;
-                
-          let opened = false;
+                const packageName = "com.xpola.player";
+                const intentUrl = `intent:${url}#Intent;package=${packageName};type=video/*;end`;
 
-           // محاولة فتح التطبيق
-           try {
-               window.location.href = intentUrl;
-               opened = true;
-           } catch {
-               opened = false;
-           }
-           
-           // تحقق بعد 2 ثانية إذا لم يتم فتح المشغل
-           setTimeout(() => {
-               if (!opened) {
-                   alert("يرجى تثبيت XPola Player لتشغيل هذا الرابط.");
-                   window.location.href = `https://play.google.com/store/apps/details?id=${packageName}`;
-               }
-           }, 2000);
-           
-           }
+if (!url) {
+    alert("الرابط غير متوفر. يرجى المحاولة مرة أخرى.");
+    return;
+}
 
+// إنشاء iframe لمحاولة فتح التطبيق
+const iframe = document.createElement("iframe");
+iframe.style.display = "none";
+iframe.src = intentUrl;
+document.body.appendChild(iframe);
+
+let opened = false;
+let timeout;
+
+// وظيفة تنظيف الموارد
+const cleanup = () => {
+    if (timeout) clearTimeout(timeout);
+    if (iframe) document.body.removeChild(iframe);
+    window.removeEventListener("visibilitychange", visibilityHandler);
+};
+
+// التحقق من تغييرات الرؤية (المستخدم غادر التطبيق أو النافذة)
+const visibilityHandler = () => {
+    if (document.visibilityState === "hidden") {
+        opened = true;
+        cleanup();
+    }
+};
+
+// إضافة مستمع لتغير حالة الرؤية
+window.addEventListener("visibilitychange", visibilityHandler);
+const fallbackUrl = `https://play.google.com/store/apps/details?id=${packageName}`;
+// تنظيف بعد مدة معينة إذا لم يتم فتح التطبيق
+timeout = setTimeout(() => {
+    if (!opened) {
+        alert("تعذر فتح XPola Player. تأكد من تثبيته على جهازك.");
+      window.location.href = fallbackUrl; // توجيه إلى Google Pla
+        cleanup();
+    }
+}, 1000);
+
+}
 
                 
                 searchInput.addEventListener("input", () => {
