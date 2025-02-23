@@ -51,28 +51,22 @@ https://googleserver-cqxw.onrender.com/josef/stream/15
 https://googleserver-cqxw.onrender.com/josef/stream/16
 
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 4
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 4
 https://googleserver-cqxw.onrender.com/josef/stream/430
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 5
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 5
 https://googleserver-cqxw.onrender.com/josef/stream/431
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 6
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 6
 https://googleserver-cqxw.onrender.com/josef/stream/432
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 7
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 7
 https://googleserver-cqxw.onrender.com/josef/stream/433
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 8
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 8
 https://googleserver-cqxw.onrender.com/josef/stream/434
 
-#EXTINF:-1 tvg-id="BEIN SPORTS 1
-SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 9
+#EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 9
 https://googleserver-cqxw.onrender.com/josef/stream/435
 
 #EXTINF:-1 tvg-id="beIN NBA HD" tvg-logo="https://i.postimg.cc/ry5mCNv6/images-1.jpg"  ,beIN NBA HD
