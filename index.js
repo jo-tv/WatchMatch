@@ -227,47 +227,49 @@ function readChannelsFromFile() {
 
 // دالة لتحديث المباريات مع الرابط المناسب من ملف Sport.json
 app.post("/update", async (req, res) => {
- const updatedMatches = req.body.matches;
+  const updatedMatches = req.body.matches;
 
- if (Array.isArray(updatedMatches)) {
-  try {
-   const channels = readChannelsFromFile(); // قراءة القنوات من الملف Sport.json
+  if (Array.isArray(updatedMatches)) {
+    try {
+      const channels = readChannelsFromFile(); // قراءة القنوات من الملف Sport.json
 
-   for (const match of updatedMatches) {
-    const { _id, team1, team2, time, competition, moaalik, status, link } = match;
+      for (const match of updatedMatches) {
+        const { _id, team1, team2, time, competition, moaalik, status, link } = match;
 
-    // إذا لم يتم إرسال رابط جديد من صفحة التعديل، ابحث عن الرابط المناسب من القنوات
-    let url = link;
-    if (!url || url === "رابط غير متوفر") {
-     const channel = channels.find(channel => channel.name === moaalik);
-     url = channel ? channel.url : "رابط غير متوفر";
+        // إذا لم يتم إرسال رابط جديد من صفحة التعديل، ابحث عن جميع الروابط من القناة
+        let url = link;
+
+        if ((!url || url === "رابط غير متوفر") && moaalik) {
+          const channel = channels.find(channel => channel.name === moaalik);
+          // إذا وُجدت القناة، أرسل جميع الروابط كمصفوفة، وإلا "رابط غير متوفر"
+          url = channel && Array.isArray(channel.url) ? channel.url : ["رابط غير متوفر"];
+        }
+
+        // تحديث المباراة
+        await Match.findByIdAndUpdate(
+          _id,
+          {
+            team1,
+            team2,
+            time,
+            competition,
+            moaalik,
+            status,
+            link: url, // إرسال الروابط كمصفوفة
+          },
+          { new: true } // إعادة الكائن بعد التحديث
+        );
+      }
+
+      console.log("تم تحديث المباريات بنجاح في قاعدة البيانات.");
+      res.redirect("/"); // إعادة التوجيه إلى الصفحة الرئيسية
+    } catch (error) {
+      console.error("Error updating matches:", error.message);
+      res.status(500).send("حدث خطأ أثناء تحديث البيانات.");
     }
-
-    // تحديث المباراة
-    await Match.findByIdAndUpdate(
-     _id,
-     {
-      team1,
-      team2,
-      time,
-      competition,
-      moaalik,
-      status,
-      link: url, // تحديث الرابط باستخدام url من القناة أو الرابط الجديد
-     },
-     { new: true } // يعيد الكائن بعد التحديث
-    );
-   }
-
-   console.log("تم تحديث المباريات بنجاح في قاعدة البيانات.");
-   res.redirect("/"); // إعادة التوجيه إلى الصفحة الرئيسية
-  } catch (error) {
-   console.error("Error updating matches:", error.message);
-   res.status(500).send("حدث خطأ أثناء تحديث البيانات.");
+  } else {
+    res.status(400).send("البيانات غير صحيحة.");
   }
- } else {
-  res.status(400).send("البيانات غير صحيحة.");
- }
 });
 
 

@@ -24,6 +24,9 @@ async function connectToDatabase() {
   console.error("ERROR CONNECTING TO DATABASE:", error.message);
  }
 }
+app.get("/ads.txt", (req, res) => {
+ res.sendFile(path.join(__dirname, "public", "ads.txt"));
+});
 
 // إعداد البيانات
 app.set("views", path.join(__dirname, "./views"));
@@ -70,7 +73,7 @@ async function fetchChannels() {
      currentUrl = "";
 
      // التوقف عند 20 قناة
-     if (channels.length >= 5) {
+     if (channels.length >= 1) {
       break;
      }
     }
@@ -121,7 +124,7 @@ function subtractOneHour(time) {
   return time; // إذا كانت القيمة غير صالحة، أعد الوقت الأصلي
  }
 
- date.setHours(date.getHours() - 1); // إنقاص ساعة
+ date.setHours(date.getHours() - 2); // إنقاص ساعة
 
  const updatedHours = String(date.getHours()).padStart(2, "0");
  const updatedMinutes = String(date.getMinutes()).padStart(2, "0");
@@ -270,86 +273,109 @@ app.post("/update", async (req, res) => {
 
 const updateMatchStatuses = async () => {
  try {
-  // قراءة المباريات من قاعدة البيانات
-  const matches = await Match.find();
+  const matches = await Match.find({}, { _id: 1, status: 1, time: 1, order: 1 });
 
   if (!matches || matches.length === 0) {
    console.warn("No matches found in the database.");
    return;
   }
 
-  // الوقت الحالي باستخدام moment.js
-  const now = moment().utcOffset(0).add(0, "hours"); // الوقت الحالي
+  const now = moment().utcOffset(0).add(0, "hours");
 
   for (const match of matches) {
    let newStatus;
-
-   // التحقق من وجود وقت المباراة (match.time)
-   if (!match.time) {
-    console.warn(`Match ${match.id || "unknown"} is missing match.time. Skipping...`);
-    continue;
-   }
-
-   // دمج الوقت مع تاريخ اليوم
-   const todayDate = moment().format("YYYY-MM-DD"); // تاريخ اليوم بصيغة كاملة
-   const matchTimeString = `${todayDate}T${match.time}`; // دمج تاريخ اليوم مع وقت المباراة
+   const todayDate = moment().format("YYYY-MM-DD");
+   const matchTimeString = `${todayDate}T${match.time}`;
    let matchTime = moment(matchTimeString);
 
-   // التحقق إذا كان وقت المباراة في وقت سابق من اليوم ولكن بنفس التاريخ
-   if (matchTime.isBefore(now, 'minute') && matchTime.isSame(now, 'day')) {
-    console.log(`Match ${match.id || "unknown"} is still today.`);
+   if (matchTime.isBefore(now, "minute") && matchTime.isSame(now, "day")) {
+    console.log(`Match ${match._id} is still today.`);
    } else if (matchTime.isBefore(now)) {
-    // إذا كان وقت المباراة في الماضي مقارنة بالوقت الحالي، نفترض أنه في اليوم التالي
     matchTime = matchTime.add(1, "day");
    }
 
-   // التحقق من أن وقت المباراة صالح
    if (!matchTime.isValid()) {
-    console.warn(`Invalid match.time for match ${match.id || "unknown"}. Skipping...`);
+    console.warn(`Invalid match.time for match ${match._id}. Skipping...`);
     continue;
    }
 
-   // حساب الفرق الزمني بين الآن ووقت المباراة
    const timeDifference = matchTime.diff(now, "milliseconds");
 
-   // تحديث الحالة بناءً على الفرق الزمني
    if (timeDifference > 15 * 60 * 1000) {
-    newStatus = "لم تبدأ"; // المباراة لم تبدأ
+    newStatus = "لم تبدأ";
    } else if (timeDifference <= 15 * 60 * 1000 && timeDifference > 0) {
-    newStatus = "ستبدأ بعد قليل"; // المباراة ستبدأ قريبًا
+    newStatus = "ستبدأ بعد قليل";
    } else if (timeDifference <= 0 && Math.abs(timeDifference) <= 2 * 60 * 60 * 1000) {
-    newStatus = "جارية"; // المباراة جارية
+    newStatus = "جارية";
    } else if (Math.abs(timeDifference) > 2 * 60 * 60 * 1000) {
-    newStatus = "انتهت"; // المباراة انتهت
+    newStatus = "انتهت";
    }
 
-   // التحقق من تعيين newStatus بشكل صحيح
-   if (!newStatus) {
-    console.error(`Unable to determine new status for match ${match.id || "unknown"}.`);
-    continue;
-   }
-
-   // تحديث قاعدة البيانات فقط إذا تغيّرت الحالة
    if (match.status !== newStatus) {
-    console.log(`Updating match ${match.id || "unknown"} status: ${match.status} -> ${newStatus}`);
     match.status = newStatus;
-    await match.save(); // حفظ التعديلات في قاعدة البيانات
+    await match.save()
+     .then(() => console.log(`Match ${match._id} saved successfully.`))
+     .catch((err) => console.error(`Error saving match ${match._id}:`, err.message));
    }
   }
 
-  console.log("All match statuses updated successfully.");
+  const sortedMatches = matches.sort((a, b) => {
+   if (a.status === "انتهت" && b.status !== "انتهت") return 1;
+   if (a.status !== "انتهت" && b.status === "انتهت") return -1;
+
+   const timeA = moment(a.time, "HH:mm");
+   const timeB = moment(b.time, "HH:mm");
+   return timeA.diff(timeB);
+  });
+
+  console.log("Sorted Matches:", sortedMatches);
+
+  const bulkOperations = sortedMatches.map((match, index) => ({
+   updateOne: {
+    filter: { _id: match._id },
+    update: { $set: { order: index } },
+   },
+  }));
+
+  console.log("Prepared bulk operations:", bulkOperations);
+
+  await Match.bulkWrite(bulkOperations)
+   .then((result) => {
+    console.log(`Updated ${result.modifiedCount} matches.`);
+   })
+   .catch((err) => {
+    console.error("Error in bulk update:", err.message);
+   });
+
+  console.log("All match statuses and order updated successfully.");
  } catch (error) {
   console.error("Error updating match statuses:", error.message);
  }
 };
 
+function updateMatchStatus() {
+ console.log("تحديث حالة المباريات...");
+
+ // تحديث 3 مرات بفاصل 9 ثوانٍ
+ for (let i = 1; i <= 5; i++) {
+  setTimeout(() => {
+   updateMatchStatuses();
+   // استدعاء كود تحديث البيانات هنا
+  }, i * 9000);
+ }
+}
+
+// تشغيل الدالة كل 10 دقائق
+setInterval(updateMatchStatus, 10 * 60 * 1000);
+
+// استدعاء أولي عند بدء التشغيل
+updateMatchStatus();
 
 // الصفحة الرئيسية
 app.get("/", async (req, res) => {
  try {
-  const matches = await readMatchesFromDatabase();
+  const matches = await Match.find().sort({ order: 1 }); // ترتيب تصاعدي حسب الحقل order
   const channels = await readChannelsFromDatabase();
-  updateMatchStatuses();
   res.render("index", { matches, channels, noMatches: matches.length === 0 });
  } catch (error) {
   console.error("Error rendering homepage:", error.message);
@@ -380,9 +406,11 @@ app.get("/login", (req, res) => res.render("singup"));
 app.get("/menu", (req, res) => res.render("menu"));
 app.get("/beinHd", (req, res) => res.render("beinHd"));
 app.get("/beinSd", (req, res) => res.render("beinSd"));
+app.get("/beinLQ", (req, res) => res.render("beinLQ"));
 app.get("/sportArab", (req, res) => res.render("sportArab"));
 app.get("/news", (req, res) => res.render("news"));
 app.get("/maroc", (req, res) => res.render("maroc"));
+app.get("/arab", (req, res) => res.render("arab"));
 
 
 function readChannels() {
