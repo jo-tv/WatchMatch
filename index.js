@@ -236,16 +236,25 @@ app.post("/update", async (req, res) => {
       for (const match of updatedMatches) {
         const { _id, team1, team2, time, competition, moaalik, status, link } = match;
 
-        // إذا لم يتم إرسال رابط جديد من صفحة التعديل، ابحث عن جميع الروابط من القناة
+        // إذا لم يتم إرسال رابط جديد من صفحة التعديل، ابحث عن الرابط المناسب من القنوات
         let url = link;
-
-        if ((!url || url === "رابط غير متوفر") && moaalik) {
+        if (!url || url === "رابط غير متوفر") {
           const channel = channels.find(channel => channel.name === moaalik);
-          // إذا وُجدت القناة، أرسل جميع الروابط كمصفوفة، وإلا "رابط غير متوفر"
-          url = channel && Array.isArray(channel.url) ? channel.url : ["رابط غير متوفر"];
+
+          if (channel) {
+            if (Array.isArray(channel.url) && channel.url.length > 1) {
+              // إذا كانت القناة تحتوي على أكثر من رابط، حوّل المصفوفة إلى سلسلة نصية مع الأقواس المربعة
+              url = `[${channel.url.map(u => `"${u}"`).join(',')}]`; // إضافة الأقواس المربعة
+            } else {
+              // إذا كانت القناة تحتوي على رابط واحد، استخدم الرابط كما هو بدون تعديل
+              url = channel.url || "رابط غير متوفر";
+            }
+          } else {
+            url = "رابط غير متوفر"; // إذا لم يتم العثور على القناة
+          }
         }
 
-        // تحديث المباراة
+        // تحديث المباراة في قاعدة البيانات
         await Match.findByIdAndUpdate(
           _id,
           {
@@ -255,9 +264,9 @@ app.post("/update", async (req, res) => {
             competition,
             moaalik,
             status,
-            link: url, // إرسال الروابط كمصفوفة
+            link: url, // تحديث الرابط (رابط واحد أو سلسلة روابط مفصولة بفواصل مع الأقواس المربعة)
           },
-          { new: true } // إعادة الكائن بعد التحديث
+          { new: true } // يعيد الكائن بعد التحديث
         );
       }
 
