@@ -1,6 +1,6 @@
 
 #EXTINF:-1 tvg-id="BEIN NEWS SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS SD
-https://googleserver-lga6.onrender.com/josef/stream/4|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/4|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 LQ
