@@ -1,52 +1,52 @@
 #EXTINF:-1 tvg-id="AlAoula.ma" tvg-logo="https://i.ibb.co/WcFBy41/oula.png"  ,Al Oula 
-https://cdn-globecast.akamaized.net/live/eds/al_aoula_inter/hls_snrt/al_aoula_inter.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/al_aoula_inter/hls_snrt/al_aoula_inter.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/GQmw3nx/laayoune.png" ,Al Oula Laayoune 
-https://cdn-globecast.akamaized.net/live/eds/al_aoula_laayoune/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/al_aoula_laayoune/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="2MMonde.ma" tvg-logo="https://i.postimg.cc/1XYtmHXd/t-l-chargement-1.png" ,2M Maroc 
-https://cdn-globecast.akamaized.net/live/eds/2m_monde/hls_video_ts_tuhawxpiemz257adfc/2m_monde.m3u8|Referer=http://www.radio2m.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/2m_monde/hls_video_ts_tuhawxpiemz257adfc/2m_monde.m3u8|Referer=http://www.radio2m.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/3rhwnSg/sport.png" ,Arriadia 
-https://cdn-globecast.akamaized.net/live/eds/arriadia/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/arriadia/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/QmtWTRL/culture.png" ,Arrabiaa 
-https://cdn-globecast.akamaized.net/live/eds/arrabiaa/hls_snrt/index.m3u|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/arrabiaa/hls_snrt/index.m3u|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/2PjWfqm/news.png" ,Al Maghribia 
-https://cdn-globecast.akamaized.net/live/eds/al_maghribia_snrt/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/al_maghribia_snrt/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/sjfvWL2/m1.jpg" ,Medi1 
-http://streaming1.medi1tv.com/live/smil:medi1tv.smil/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+http://streaming1.medi1tv.com/live/smil:medi1tv.smil/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/KFRvWx7/telemaroc.png" ,Télé Maroc 
-https://api.new.livestream.com/accounts/27130247/events/8196478/live.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://api.new.livestream.com/accounts/27130247/events/8196478/live.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/kQ2Srv7/m24.png" ,M24 وكالة المغرب العربي للأنباء
-https://63df3191463ce.streamlock.net/live/ngrp:Live2.stream_all/index.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://63df3191463ce.streamlock.net/live/ngrp:Live2.stream_all/index.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="Med1.tv.Afrique.ma" tvg-logo="https://i.ibb.co/sjfvWL2/m1.jpg" ,Medi 1 Afrique
-https://streaming1.medi1tv.com/live/smil:medi1fr.smil/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://streaming1.medi1tv.com/live/smil:medi1fr.smil/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.ibb.co/wJrfbDy/chada.png" ,Chada TV  
-https://chadatv.vedge.infomaniak.com/livecast/chadatv/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://chadatv.vedge.infomaniak.com/livecast/chadatv/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.postimg.cc/hvJrP2Mz/Assadissa.png" ,assadissa
-https://cdn-globecast.akamaized.net/live/eds/assadissa/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://cdn-globecast.akamaized.net/live/eds/assadissa/hls_snrt/index.m3u8|Referer=https://snrtlive.ma|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="MBC 5 HD+" tvg-logo="https://i.postimg.cc/mrwVdztD/images.jpg" ,MBC 5
-https://shls-mbc5-prod-dub.shahid.net/out/v1/2720564b6a4641658fdfb6884b160da2/index.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://shls-mbc5-prod-dub.shahid.net/out/v1/2720564b6a4641658fdfb6884b160da2/index.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 

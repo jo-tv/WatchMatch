@@ -1,76 +1,76 @@
 
 
 #EXTINF:-1 tvg-id="BEIN NEWS HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS HD
-https://googleserver-d4w5.onrender.com/josef/stream/4|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/4|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 HD
-https://googleserver-d4w5.onrender.com/josef/stream/5|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/5|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 2 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 2 HD
-https://googleserver-d4w5.onrender.com/josef/stream/6|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/6|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 3 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 3 HD
-https://googleserver-d4w5.onrender.com/josef/stream/7|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/7|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 4 HD
-https://googleserver-d4w5.onrender.com/josef/stream/8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 5 HD
-https://googleserver-d4w5.onrender.com/josef/stream/9|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/9|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 6 HD
-https://googleserver-d4w5.onrender.com/josef/stream/10|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/10|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 7 HD
-https://googleserver-d4w5.onrender.com/josef/stream/11|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/11|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 8 HD
-https://googleserver-d4w5.onrender.com/josef/stream/12|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/12|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 9 HD
-https://googleserver-d4w5.onrender.com/josef/stream/13|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/13|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN XTRA 1 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 1 HD
-https://googleserver-d4w5.onrender.com/josef/stream/14|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/14|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN XTRA 2 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 2 HD
-https://googleserver-d4w5.onrender.com/josef/stream/15|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/15|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN XTRA 2 HD" tvg-logo="https://i.postimg.cc/kXrS74dC/900.png"  ,BEIN XTRA 3 HD
-https://googleserver-d4w5.onrender.com/josef/stream/16|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/16|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 4
 https://googleserver-d4w5.onrender.com/josef/stream/430
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 5
-https://googleserver-d4w5.onrender.com/josef/stream/431|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/431|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 6
-https://googleserver-d4w5.onrender.com/josef/stream/432|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/432|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 7
-https://googleserver-d4w5.onrender.com/josef/stream/433|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/433|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 8
-https://googleserver-d4w5.onrender.com/josef/stream/434|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/434|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 SD"tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN EXTRA 9
-https://googleserver-d4w5.onrender.com/josef/stream/435|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/435|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:-1 tvg-id="beIN NBA HD" tvg-logo="https://i.postimg.cc/ry5mCNv6/images-1.jpg"  ,beIN NBA HD
-https://googleserver-d4w5.onrender.com/josef/stream/17|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif
+https://googleserver-d4w5.onrender.com/josef/stream/17|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 
