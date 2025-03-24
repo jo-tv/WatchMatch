@@ -1,7 +1,7 @@
 
 
 #EXTINF:-1 tvg-id="BEIN NEWS HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN NEWS HD
-https://googleserver-d4w5.onrender.com/josef/stream/4|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
+https://disastrous-ynes-google-hls-com-bd99f4a5.koyeb.app/josef/stream/240|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 
 #EXTINF:-1 tvg-id="BEIN SPORTS 1 HD" tvg-logo="https://i.postimg.cc/PfCbt9pW/Photoroom-20250121-232141.png"  ,BEIN SPORTS 1 HD
