@@ -379,8 +379,6 @@ function updateMatchStatus() {
 // تشغيل الدالة كل 10 دقائق
 setInterval(updateMatchStatus, 10 * 60 * 1000);
 
-// استدعاء أولي عند بدء التشغيل
-updateMatchStatus();
 
 // الصفحة الرئيسية
 app.get("/", async (req, res) => {
@@ -392,6 +390,9 @@ app.get("/", async (req, res) => {
   console.error("Error rendering homepage:", error.message);
   res.status(500).send("حدث خطأ أثناء معالجة الطلب.");
  }
+ // استدعاء أولي عند بدء التشغيل
+updateMatchStatus();
+
 });
 
 // صفحة التعديل
