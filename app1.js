@@ -280,26 +280,23 @@ const updateMatchStatuses = async () => {
    return;
   }
 
-  const now = moment(); // الوقت الحالي حسب توقيت السيرفر
+  const now = moment().utcOffset(1).add(1, "hours");
 
   for (const match of matches) {
    let newStatus;
    const todayDate = moment().format("YYYY-MM-DD");
    const matchTimeString = `${todayDate}T${match.time}`;
+   let matchTime = moment(matchTimeString);
 
-   // إضافة ساعة واحدة على وقت المباراة
-   let matchTime = moment(matchTimeString).add(1, "hour");
-
-   if (!matchTime.isValid()) {
-    console.warn(`Invalid match.time for match ${match._id}. Skipping...`);
-    continue;
-   }
-
-   // إذا وقت المباراة قبل الآن ولكن لا يزال اليوم نفسه
    if (matchTime.isBefore(now, "minute") && matchTime.isSame(now, "day")) {
     console.log(`Match ${match._id} is still today.`);
    } else if (matchTime.isBefore(now)) {
     matchTime = matchTime.add(1, "day");
+   }
+
+   if (!matchTime.isValid()) {
+    console.warn(`Invalid match.time for match ${match._id}. Skipping...`);
+    continue;
    }
 
    const timeDifference = matchTime.diff(now, "milliseconds");
@@ -322,13 +319,12 @@ const updateMatchStatuses = async () => {
    }
   }
 
-  // ترتيب المباريات حسب الوقت
   const sortedMatches = matches.sort((a, b) => {
    if (a.status === "انتهت" && b.status !== "انتهت") return 1;
    if (a.status !== "انتهت" && b.status === "انتهت") return -1;
 
-   const timeA = moment(a.time, "HH:mm").add(1, "hour");
-   const timeB = moment(b.time, "HH:mm").add(1, "hour");
+   const timeA = moment(a.time, "HH:mm");
+   const timeB = moment(b.time, "HH:mm");
    return timeA.diff(timeB);
   });
 
