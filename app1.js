@@ -124,7 +124,7 @@ function subtractOneHour(time) {
   return time; // إذا كانت القيمة غير صالحة، أعد الوقت الأصلي
  }
 
- date.setHours(date.getHours() - 2); // إنقاص ساعة
+ date.setHours(date.getHours() - 1); // إنقاص ساعة
 
  const updatedHours = String(date.getHours()).padStart(2, "0");
  const updatedMinutes = String(date.getMinutes()).padStart(2, "0");
@@ -280,7 +280,7 @@ const updateMatchStatuses = async () => {
    return;
   }
 
-  const now = moment().utcOffset(1).add(1, "hours");
+  const now = moment().utcOffset(0).add(0, "hours");
 
   for (const match of matches) {
    let newStatus;
