@@ -291,7 +291,7 @@ const updateMatchStatuses = async () => {
    return;
   }
 
-  const now = moment().utcOffset(0).add(0, "hours");
+  const now = moment().subtract(1, "hour");
 
   for (const match of matches) {
    let newStatus;
@@ -368,7 +368,7 @@ function updateMatchStatus() {
  console.log("تحديث حالة المباريات...");
 
  // تحديث 3 مرات بفاصل 9 ثوانٍ
- for (let i = 1; i <= 5; i++) {
+ for (let i = 1; i <= 3; i++) {
   setTimeout(() => {
    updateMatchStatuses();
    // استدعاء كود تحديث البيانات هنا
