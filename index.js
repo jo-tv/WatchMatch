@@ -291,7 +291,7 @@ const updateMatchStatuses = async () => {
    return;
   }
 
-  const now = moment().subtract(2, "hour");
+  const now = moment().subtract(0, "hour");
 
   for (const match of matches) {
    let newStatus;
