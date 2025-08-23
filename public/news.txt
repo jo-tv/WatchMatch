@@ -1,7 +1,7 @@
 
 
 #EXTINF:0 CUID="128" tvg-name="AL ARABIYA" tvg-logo="https://bit.ly/3owObkh" group-title="News اخبار",AL ARABIYA
-https://googleserver-d4w5.onrender.com/josef/stream/96|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
+https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
 
 #EXTINF:0 CUID="129" tvg-name="AL Hadath News" tvg-logo="https://yt3.ggpht.com/a-/AAuE7mClstU-uA-TBDWsc8zkB_mjBgUMvIh1WJwarg=s900-mo-c-c0xffffffff-rj-k-no" group-title="News اخبار",AL Hadath News
 https://googleserver-d4w5.onrender.com/josef/stream/97|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false
