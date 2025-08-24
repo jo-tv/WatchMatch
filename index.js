@@ -135,7 +135,7 @@ function subtractOneHour(time) {
 // دالة لجلب المباريات وحفظها في قاعدة البيانات
 async function fetchMatches() {
   try {
-    const { data } = await axios.get('https://www.kora-live.im/');
+    const { data } = await axios.get('https://www.kooralive-new.com/');
     const $ = require('cheerio').load(data);
 
     const matches = [];
