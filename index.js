@@ -396,10 +396,10 @@ app.get('/edit', async (req, res) => {
   res.render('edit', { matches });
 });
 
-app.post('/delete/:id', async (req, res) => {
+app.delete('/delete/:id', async (req, res) => {
   try {
     await Match.findByIdAndDelete(req.params.id);
-    res.redirect('/');
+    res.sendStatus(200);
   } catch (err) {
     res.status(500).send('خطأ أثناء الحذف');
   }

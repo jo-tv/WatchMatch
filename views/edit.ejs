@@ -138,10 +138,7 @@
       <input type="text" id="link-<%= index %>" name="matches[<%= index %>][link]" value="<%= match.link %>" />
 
       <!-- زر مسح المباراة -->
-<form method="POST" action="/delete/<%= match._id %>">
-  <button type="submit">🗑 مسح هذه المباراة</button>
-</form>
-    </div>
+<button type="button" onclick="deleteMatch('<%= match._id %>')">🗑 مسح هذه المباراة</button>
   <% }) %>
   
   <div class="buttons">
@@ -165,10 +162,16 @@
   }
 
   function deleteMatch(id) {
-    if (confirm("هل تريد فعلاً مسح هذه المباراة؟")) {
-      window.location.href = "/delete/" + id;
-    }
+  if (confirm("هل تريد فعلاً مسح هذه المباراة؟")) {
+    fetch('/delete/' + id, { method: 'DELETE' })
+      .then(res => {
+        if (res.ok) {
+          location.reload(); // أو تشيل العنصر من DOM بدون إعادة تحميل
+        }
+      })
+      .catch(err => console.error(err));
   }
+}
 </script>
 <script src="./tcheck.js"></script>
 </body>
