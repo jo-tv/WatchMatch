@@ -136,12 +136,18 @@
 
       <label for="link-<%= index %>">الرابط:</label>
       <input type="text" id="link-<%= index %>" name="matches[<%= index %>][link]" value="<%= match.link %>" />
+
+      <!-- زر مسح المباراة -->
+<form method="POST" action="/delete/<%= match._id %>">
+  <button type="submit">🗑 مسح هذه المباراة</button>
+</form>
     </div>
   <% }) %>
+  
   <div class="buttons">
-    <button type="submit">حفظ التعديلات</button>
-    <button type="button" class="delete-btn" onclick="clearData()">مسح البيانات</button>
-    <button type="button" class="reload-btn" onclick="reloadData()">إعادة جلب البيانات</button>
+    <button type="submit">💾 حفظ التعديلات</button>
+    <button type="button" class="delete-btn" onclick="clearData()">🗑 مسح جميع البيانات</button>
+    <button type="button" class="reload-btn" onclick="reloadData()">🔄 إعادة جلب البيانات</button>
   </div>
 </form>
 
@@ -157,7 +163,13 @@
       window.location.href = "/reload";
     }
   }
+
+  function deleteMatch(id) {
+    if (confirm("هل تريد فعلاً مسح هذه المباراة؟")) {
+      window.location.href = "/delete/" + id;
+    }
+  }
 </script>
-  <script src="./tcheck.js"></script>
+<script src="./tcheck.js"></script>
 </body>
 </html>

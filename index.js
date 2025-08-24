@@ -396,6 +396,15 @@ app.get('/edit', async (req, res) => {
   res.render('edit', { matches });
 });
 
+app.post('/delete/:id', async (req, res) => {
+  try {
+    await Match.findByIdAndDelete(req.params.id);
+    res.redirect('/');
+  } catch (err) {
+    res.status(500).send('خطأ أثناء الحذف');
+  }
+});
+
 // مسح البيانات
 app.get('/clear', async (req, res) => {
   try {

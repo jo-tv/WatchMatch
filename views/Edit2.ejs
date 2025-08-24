@@ -106,13 +106,17 @@
   <% matches.forEach((match, index) => { %>
     <div class="match-container">
       <h3>مباراة <%= index + 1 %></h3>
+
+      <!-- الحقل المخفي لإرسال _id -->
+      <input type="hidden" name="matches[<%= index %>][_id]" value="<%= match._id %>" />
+
       <label for="team1-<%= index %>">الفريق 1:</label>
       <input type="text" id="team1-<%= index %>" name="matches[<%= index %>][team1]" value="<%= match.team1 %>" />
 
       <label for="logo1-<%= index %>">الشعار 1:</label>
       <input type="text" id="logo1-<%= index %>" name="matches[<%= index %>][logo1]" value="<%= match.logo1 %>" />
       
-            <label for="team2-<%= index %>">الفريق 2:</label>
+      <label for="team2-<%= index %>">الفريق 2:</label>
       <input type="text" id="team2-<%= index %>" name="matches[<%= index %>][team2]" value="<%= match.team2 %>" />
 
       <label for="logo2-<%= index %>">الشعار 2:</label>
@@ -124,9 +128,8 @@
       <label for="status-<%= index %>">الحالة:</label>
       <input type="text" id="status-<%= index %>" name="matches[<%= index %>][status]" value="<%= match.status %>" />
       
-       <label for="moaalik-<%= index %>">القناة ناقلة:</label>
-      <input type="text" id="moaalik-<%= index %>" name="matches[<%= index %>][moaalik]"
-      value="<%= match.moaalik %>" />
+      <label for="moaalik-<%= index %>">القناة ناقلة:</label>
+      <input type="text" id="moaalik-<%= index %>" name="matches[<%= index %>][moaalik]" value="<%= match.moaalik %>" />
 
       <label for="competition-<%= index %>">المسابقة:</label>
       <input type="text" id="competition-<%= index %>" name="matches[<%= index %>][competition]" value="<%= match.competition %>" />
@@ -155,18 +158,6 @@
     }
   }
 </script>
-  <script>
-    function clearData() {
-      if (confirm("هل أنت متأكد من مسح جميع البيانات؟")) {
-        window.location.href = "/clear"; // مسح البيانات عبر مسار /clear
-      }
-    }
-
-    function reloadData() {
-      if (confirm("هل تريد إعادة جلب البيانات من الموقع؟")) {
-        window.location.href = "/reload"; // جلب البيانات عبر مسار /reload
-      }
-    }
-  </script>
+  <script src="./tcheck.js"></script>
 </body>
 </html>
