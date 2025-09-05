@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>إرسال حالة المباراة</title>
+        <style>
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(to right, #1f1f3f, #121212);
+                color: #fff;
+                padding: 30px;
+                direction: rtl;
+            }
+            .container {
+                max-width: 700px;
+                margin: auto;
+                background: #222244;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            }
+            h2 {
+                text-align: center;
+                color: #00ffcc;
+                margin-bottom: 25px;
+            }
+            label {
+                display: block;
+                margin: 15px 0 5px;
+                font-weight: bold;
+            }
+            input[type="text"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 12px;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                background: #2e2e5e;
+                color: #fff;
+            }
+            textarea {
+                resize: vertical;
+            }
+            button {
+                background-color: #00ffcc;
+                color: #121212;
+                font-weight: bold;
+                padding: 15px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 20px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 16px;
+                transition: background 0.3s;
+            }
+            button:hover {
+                background-color: #00d4aa;
+            }
+            #output {
+                margin-top: 20px;
+                background: #1e1e3f;
+                padding: 15px;
+                border-radius: 10px;
+                word-break: break-all;
+            }
+            .copy-btn {
+                margin-top: 10px;
+                background: #ffcc00;
+                color: #121212;
+                font-weight: bold;
+            }
+            .copy-btn:hover {
+                background: #e6b800;
+            }
+            .preview-box {
+                margin-top: 20px;
+                padding: 20px;
+                background: linear-gradient(135deg, #333366, #1f1f3f);
+                border-radius: 12px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                text-align: center;
+            }
+            .preview-box h3 {
+                margin: 10px 0;
+                color: #00ffcc;
+            }
+            .preview-box p {
+                font-size: 16px;
+                color: #fff;
+                margin-top: 10px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>إرسال حالة المباراة</h2>
+
+            <label for="idsesion">معرّف الجلسة (idsesion):</label>
+            <input type="text" id="idsesion" placeholder="أدخل معرّف الجلسة" />
+
+            <label for="teamA">الفريق الأول:</label>
+            <input type="text" id="teamA" placeholder="أدخل اسم الفريق الأول" />
+
+            <label for="teamB">الفريق الثاني:</label>
+            <input
+                type="text"
+                id="teamB"
+                placeholder="أدخل اسم الفريق الثاني"
+            />
+
+            <label for="matchStatus">حالة المباراة:</label>
+            <select id="matchStatus">
+                <option value="Live">مباشر</option>
+                <option value="Finished">انتهت</option>
+                <option value="Upcoming">ستبدأ بعد قليل</option>
+            </select>
+
+            <label for="message">رسالة مخصصة:</label>
+            <textarea
+                id="message"
+                rows="3"
+                placeholder="أدخل رسالتك هنا"
+            ></textarea>
+
+            <button id="generateBtn">توليد رابط الإشعار</button>
+            <button id="clearStorageBtn">مسح الجلسة المخزنة</button>
+
+            <div class="preview-box" id="previewBox">
+                <h3>معاينة الرسالة</h3>
+                <p id="previewMessage">ستظهر معاينة رسالتك هنا</p>
+            </div>
+
+            <div id="output"></div>
+            <button class="copy-btn" id="copyBtn">نسخ الرابط</button>
+        </div>
+
+        <script>
+            const generateBtn = document.getElementById("generateBtn");
+            const clearStorageBtn = document.getElementById("clearStorageBtn");
+            const copyBtn = document.getElementById("copyBtn");
+            const outputDiv = document.getElementById("output");
+            const previewMessage = document.getElementById("previewMessage");
+            const idsesionInput = document.getElementById("idsesion");
+
+            // استرجاع idsesion عند تحميل الصفحة إذا كانت مخزنة
+            window.addEventListener("DOMContentLoaded", () => {
+                const savedSession = localStorage.getItem("idsesion");
+                if (savedSession) idsesionInput.value = savedSession;
+            });
+
+            generateBtn.addEventListener("click", () => {
+                const idsesion = idsesionInput.value.trim();
+                const teamA = document.getElementById("teamA").value.trim();
+                const teamB = document.getElementById("teamB").value.trim();
+                const status = document.getElementById("matchStatus").value;
+                const message = document.getElementById("message").value.trim();
+
+                if (!idsesion || !teamA || !teamB) {
+                    outputDiv.textContent = "يرجى ملء جميع الحقول.";
+                    previewMessage.textContent = "ستظهر معاينة رسالتك هنا";
+                    return;
+                }
+
+                // حفظ الجلسة في localStorage
+                localStorage.setItem("idsesion", idsesion);
+
+                // إضافة الرموز العربية
+                let statusText = "";
+                if (status === "Live") statusText = "مباشر 🔴";
+                else if (status === "Finished") statusText = "انتهت ✅";
+                else if (status === "Upcoming")
+                    statusText = "ستبدأ بعد قليل ⏳";
+
+                const titulo = `⚽ ${teamA} 🆚 ${teamB} ⚽`;
+                const subtitulo = `${statusText} - ${message}`;
+
+                const link = `https://www.appcreator24.com/intra/app_envios_confirm_guardando.php?idioma=en&idsesion=${encodeURIComponent(
+                    idsesion
+                )}&idapp=3461147&titulo=${encodeURIComponent(
+                    titulo
+                )}&subtitulo=${encodeURIComponent(
+                    subtitulo
+                )}&idabrir=0&idseccabrir=33807868&web=&sustituir=0&cod_img=&enviar_a=0&codigo=&mensaje_chat=`;
+
+                outputDiv.textContent = link;
+                previewMessage.textContent = `${titulo}\n${subtitulo}`;
+            });
+
+            copyBtn.addEventListener("click", () => {
+                const text = outputDiv.textContent;
+                if (!text) return;
+                navigator.clipboard.writeText(text).then(() => {
+                    alert("تم نسخ الرابط!");
+                });
+            });
+
+            clearStorageBtn.addEventListener("click", () => {
+                localStorage.removeItem("idsesion");
+                idsesionInput.value = "";
+                alert("تم مسح الجلسة المخزنة!");
+            });
+        </script>
+    </body>
+</html>

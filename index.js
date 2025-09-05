@@ -427,6 +427,7 @@ app.get('/sportArab', (req, res) => res.render('sportArab'));
 app.get('/news', (req, res) => res.render('news'));
 app.get('/maroc', (req, res) => res.render('maroc'));
 app.get('/arab', (req, res) => res.render('arab'));
+app.get('/sendNot', (req, res) => res.render('sendNotification'));
 
 function readChannels() {
   try {
