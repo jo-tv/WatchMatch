@@ -231,7 +231,7 @@ app.post('/update', async (req, res) => {
       const channels = readChannelsFromFile(); // قراءة القنوات من الملف Sport.json
 
       for (const match of updatedMatches) {
-        const { _id, team1, team2, time, competition, moaalik, status, link } = match;
+        const { _id, team1, team2, logo1, logo2, time, competition, moaalik, status, link } = match;
 
         // إذا لم يتم إرسال رابط جديد من صفحة التعديل، ابحث عن الرابط المناسب من القنوات
         let url = link;
@@ -257,6 +257,8 @@ app.post('/update', async (req, res) => {
           {
             team1,
             team2,
+            logo1,
+            logo2,
             time,
             competition,
             moaalik,
