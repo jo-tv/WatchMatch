@@ -7,7 +7,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 1 HD",
+        "name": ["BEIN SPORTS 1 HD","BEIN SPORTS HD 1","BEIN SPORTS HD1"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/515|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1 📺HD ",
@@ -19,7 +19,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 2 HD",
+        "name":[ "BEIN SPORTS 2 HD","BEIN SPORTS HD2","BEIN SPORTS HD 2"],
         "url": [
           "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/516|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰️1 📺HD ",
@@ -30,7 +30,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 3 HD",
+        "name":[ "BEIN SPORTS 3 HD","BEIN SPORTS HD3","BEIN SPORTS HD 3"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/517|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰️1 📺HD ",
@@ -41,7 +41,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 4 HD",
+        "name": ["BEIN SPORTS 4 HD","BEIN SPORTS HD4","BEIN SPORTS HD 4"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/518|applogobr=https://i.postimg.c|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰️1 📺HD ",
@@ -50,7 +50,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 5 HD",
+        "name": ["BEIN SPORTS 5 HD","BEIN SPORTS HD5","BEIN SPORTS HD 5"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/519|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 6 HD",
+        "name": ["BEIN SPORTS 6 HD","BEIN SPORTS HD6","BEIN SPORTS HD 6"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/520|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 7 HD",
+        "name": ["BEIN SPORTS 7 HD","BEIN SPORTS HD7","BEIN SPORTS HD 7"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/521|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
@@ -84,7 +84,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 8 HD",
+        "name": ["BEIN SPORTS 8 HD","BEIN SPORTS HD8","BEIN SPORTS HD 8","بى أن سبورت 8 HD"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/522|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
@@ -93,7 +93,7 @@
         ]
     },
     {
-        "name": "BEIN SPORTS 9 HD",
+        "name": ["BEIN SPORTS 9 HD","BEIN SPORTS HD9","BEIN SPORTS HD 9"],
         "url": [
             "|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name=  🛰️1🔗6️⃣🌟  📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/523|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|name= 🛰2 📺HD |cast=false ",
@@ -312,28 +312,14 @@
         ]
     },
     {
-        "name": "ON SPORTS 1",
+        "name": ["ON SPORTS 1","ON TIME SPORT HD","أون سبورت 1"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/536|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/60|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
         ]
     },
     {
-        "name": "ON TIME SPORT HD",
-        "url": [
-            "https://mo3ad.xyz//mo3ad626/mo3ad626/536|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
-            "https://mo3ad.xyz//mo3ad626/mo3ad626/60|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
-        ]
-    },
-    {
-        "name": "ON SPORTS 2",
-        "url": [
-            "https://mo3ad.xyz//mo3ad626/mo3ad626/537|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
-            "https://mo3ad.xyz//mo3ad626/mo3ad626/61|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
-        ]
-    },
-    {
-        "name": "ON TIME SPORT 2 HD",
+        "name": ["ON SPORTS 2","ON TIME SPORT 2 HD","أون سبورت 2"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/537|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/61|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
