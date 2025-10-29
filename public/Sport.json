@@ -102,21 +102,21 @@
         ]
     },
     {
-        "name": "BEIN XTRA 1 HD",
+        "name": ["BEIN XTRA 1 HD","BEIN SPORTS XTRA 1"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/13|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz/live/rHZRdd7PFr/KbjNvZVzJD/507|user-agent=637737|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
         ]
     },
     {
-        "name": "BEIN XTRA 2 HD",
+        "name": ["BEIN XTRA 2 HD","BEIN SPORTS XTRA 2"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/14|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz/live/rHZRdd7PFr/KbjNvZVzJD/508|user-agent=637737|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
         ]
     },
     {
-        "name": "BEIN XTRA 3 HD",
+        "name": ["BEIN XTRA 3 HD","BEIN SPORTS XTRA 3"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/15|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz/live/rHZRdd7PFr/KbjNvZVzJD/509|user-agent=637737|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD "
@@ -190,7 +190,7 @@
         ]
     },
     {
-        "name": "AD SPORTS ASIA 1",
+        "name": ["AD SPORTS ASIA 1"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/32|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/34|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD ",
@@ -198,7 +198,7 @@
         ]
     },
     {
-        "name": "AD SPORTS ASIA 2",
+        "name": ["AD SPORTS ASIA 2"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/33|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://mo3ad.xyz//mo3ad626/mo3ad626/35|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 📺HD ",
@@ -206,7 +206,7 @@
         ]
     },
     {
-        "name": "STARZPLAY",
+        "name": ["STARZPLAY","أبو ظبي الرياضية 1"],
         "url": ["https://mo3ad.xyz//mo3ad626/mo3ad626/30|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1  STARZPLAY 1 📺HD ","https://mo3ad.xyz//mo3ad626/mo3ad626/31|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2  STARZPLAY 2 📺HD ","https://mo3ad.xyz//mo3ad626/mo3ad626/32|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰3 AD Sport Asia 1 📺HD ","https://mo3ad.xyz//mo3ad626/mo3ad626/33|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰4 AD Sport Asia 2 📺HD ","https://mo3ad.xyz//mo3ad626/mo3ad626/34|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰5 AD Sport 1📺HD ","https://mo3ad.xyz//mo3ad626/mo3ad626/35|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰2 AD Sport 2 📺HD "]
     },
     {
@@ -356,7 +356,7 @@
         ]
     },
     {
-        "name": "ARRYADIA",
+        "name": ["ARRYADIA","الرياضية المغربية (3)"],
         "url": [
             "https://mo3ad.xyz//mo3ad626/mo3ad626/597|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false|name= 🛰1 📺HD ",
             "https://cdn.live.easybroadcast.io/abr_corp/73_arryadia_k2tgcj0/corp/73_arryadia_k2tgcj0_480p/chunks_dvr.m3u8|applogobr=https://i.postimg.cc/zX3wSVNG/NEVER-GIVE-UP.gif|cast=false ",
