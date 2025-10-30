@@ -236,13 +236,11 @@ app.post('/update', async (req, res) => {
         // 🟢 إذا لم يتم إرسال رابط جديد من صفحة التعديل، نبحث عن الرابط المناسب
         let url = link;
         if (!url || url === 'رابط غير متوفر') {
-
           // ✅ البحث الذكي داخل Sport.json حسب أسماء القناة المتعددة
-          const channel = channels.find((ch) =>
-            Array.isArray(ch.name) &&
-            ch.name.some(alias =>
-              alias.toLowerCase().trim() === moaalik.toLowerCase().trim()
-            )
+          const channel = channels.find(
+            (ch) =>
+              Array.isArray(ch.name) &&
+              ch.name.some((alias) => alias.toLowerCase().trim() === moaalik.toLowerCase().trim())
           );
 
           if (channel) {
@@ -465,28 +463,71 @@ app.post('/search', (req, res) => {
 
   if (!channelName) {
     return res.render('search', {
-      result: null,
+      results: [],
+      jsonOutput: '[]',
       query: '',
       error: 'يرجى إدخال اسم القناة.',
       suggestions: [],
     });
   }
 
-  // قراءة القنوات من ملف JSON
-  const channels = readChannelsFromFile(); // استخدم دالة لقراءة القنوات
+  const channels = readChannelsFromFile();
+  const query = channelName.trim().toLowerCase();
 
-  const query = channelName.trim().toUpperCase();
-  const suggestions = channels
-    .filter((channel) => channel.name.includes(query))
-    .map((channel) => channel.name);
+  // تصفية القنوات التي تتضمن اسم القناة في الاستعلام
+  const matchedChannels = channels.filter((channel) =>
+    String(channel.name).toLowerCase().includes(query)
+  );
 
-  // إذا كان هناك تطابقات
-  if (suggestions.length > 0) {
-    const result =
-      suggestions.length === 1 ? channels.find((channel) => channel.name === suggestions[0]) : null;
+  const suggestions = matchedChannels.map((channel) => channel.name);
+
+  let detailedResults = [];
+  let jsonOutputArray = [];
+
+  if (matchedChannels.length > 0) {
+    detailedResults = matchedChannels.map((channel) => {
+      // توحيد وتنظيف جميع الأجزاء
+      const urlPart = String(channel.url || '');
+      const logoPart = `applogobr=${String(channel.applogobr || '')}`;
+      const castValue = String(channel.cast || 'false');
+      const castPart = `cast=${castValue}`;
+
+      // الحصول على الاسم وتنظيفه
+      let channelNameDisplay = String(
+        channel.description_name || channel.name || 'Untitled Channel'
+      );
+      channelNameDisplay = channelNameDisplay.replace(/[,"]/g, ''); // إزالة الفواصل والاقتباسات
+
+      const namePart = `name=${channelNameDisplay}`;
+
+      // **تجميع الأجزاء**
+      const parts = [urlPart].filter((p) => p);
+      let formattedLinkRaw = parts.join('|');
+
+      // 🟢 تعديل الفاصلة بين الروابط
+      formattedLinkRaw = formattedLinkRaw.replace(/,(?=https?:\/\/)/g, '","');
+
+      // 🟢 إضافة علامات اقتباس بدون JSON.stringify
+      formattedLinkRaw = `"${formattedLinkRaw}"`;
+
+      // إضافة إلى المصفوفة
+      jsonOutputArray.push(formattedLinkRaw);
+
+      // عرض فردي
+      const formattedLinkForDisplay = `[${formattedLinkRaw}]`;
+
+      return {
+        name: String(channel.name || 'Untitled'),
+        formattedLink: formattedLinkForDisplay,
+      };
+    });
+
+    // 🟢 الناتج الإجمالي بصيغة JSON حقيقية بدون backslashes
+    const jsonOutput = `[${jsonOutputArray.join(',\n')}]`;
 
     return res.render('search', {
-      result,
+      results: detailedResults,
+      jsonOutput: jsonOutput,
       query: channelName,
       error: null,
       suggestions,
@@ -495,7 +536,8 @@ app.post('/search', (req, res) => {
 
   // إذا لم يتم العثور على أي قناة
   res.render('search', {
-    result: null,
+    results: [],
+    jsonOutput: '[]',
     query: channelName,
     error: 'لم يتم العثور على القناة.',
     suggestions: [],

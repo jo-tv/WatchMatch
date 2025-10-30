@@ -1,28 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>البحث عن القنوات</title>
+  <title>نتائج البحث عن القنوات</title>
   <style>
+:root {
+    --primary-color: #1a73e8;
+    /* أزرق جوجل */
+    --secondary-color: #607d8b;
+    /* أزرق داكن/رمادي */
+    --success-color: #0f9d58;
+    /* أخضر */
+    --bg-color: #f8f9fa;
+    /* خلفية فاتحة */
+    --card-bg: #ffffff;
+    --link-bg: #e8f0fe;
+    /* خلفية فاتحة للرابط */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Tahoma', 'Arial', sans-serif;
+      background-color: var(--bg-color);
+      color: #333;
+      padding: 20px 10px;
+      text-align: right;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
     }
     h1 {
-      margin-top: 20px;
-      color: #333;
+      color: var(--primary-color);
+      border-bottom: 3px solid #e0e0e0;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
     }
-    form {
-      margin: 20px auto;
-      max-width: 400px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    h2 {
+      color: #444;
+      font-size: 1.5rem;
+      margin-top: 20px;
+      padding-right: 10px;
+      border-right: 4px solid var(--primary-color);
+    }
+    .form-group {
+      margin-bottom: 25px;
     }
     label {
       display: block;
@@ -31,128 +62,300 @@
       color: #555;
     }
     input[type="text"] {
-      width: calc(100% - 20px);
-      padding: 10px;
+      width: 100%;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: border-color 0.3s, box-shadow 0.3s;
     }
-    button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #007BFF;
+    input[type="text"]:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+      outline: none;
+    }
+    .submit-button {
+      background-color: var(--success-color);
       color: white;
-      font-size: 16px;
-      border-radius: 5px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      width: 100%;
       transition: background-color 0.3s;
     }
-    button:hover {
-      background-color: #0056b3;
+    .submit-button:hover {
+      background-color: #0c8046;
     }
-    table {
-      margin: 20px auto;
-      border-collapse: collapse;
-      width: 80%;
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    .error {
+      color: #d93025;
+      /* أحمر */
+      font-weight: bold;
+      padding: 10px;
+      background: #fce8e6;
+      border: 1px solid #f5c6cb;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    th, td {
-      padding: 12px 15px;
+
+    /* Channel Card Styling */
+    .channel-card {
+      background: var(--card-bg);
       border: 1px solid #ddd;
-      text-align: left;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
     }
-    th {
-      background-color: #007BFF;
+    .channel-card:hover {
+      transform: translateY(-5px);
+    }
+    .channel-name {
+      color: var(--primary-color);
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px dashed #eee;
+      word-break: break-word;
+    }
+    .link-label {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+    .link-box {
+      background: var(--link-bg);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow-x: auto;
+      border: 1px solid var(--primary-color);
+    }
+    .formatted-link {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.9rem;
+      color: #343a40;
+      white-space: nowrap;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .copy-button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      flex-grow: 1;
+      transition: background-color 0.3s, transform 0.1s;
+    }
+    .copy-button:active {
+      transform: scale(0.98);
+    }
+    .copy-button.primary {
+      background-color: var(--primary-color);
       color: white;
     }
-    td button {
-      background-color: #28a745;
-      margin: 0 5px;
+    .copy-button.primary:hover {
+      background-color: #1669d0;
     }
-    td button:hover {
-      background-color: #218838;
+    .copy-button.secondary {
+      background-color: var(--secondary-color);
+      color: white;
     }
-    p {
-      margin-top: 10px;
-      color: red;
+    .copy-button.secondary:hover {
+      background-color: #4a6572;
     }
-    .suggestions {
-      margin: 0 auto;
-      max-width: 400px;
-      text-align: left;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .suggestions div {
-      padding: 10px;
-      cursor: pointer;
-      border-bottom: 1px solid #ddd;
-    }
-    .suggestions div:last-child {
-      border-bottom: none;
-    }
-    .suggestions div:hover {
-      background-color: #f1f1f1;
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .button-group {
+        flex-direction: column;
+      }
+      .copy-button {
+        width: 100%;
+      }
     }
   </style>
-</head>
-<body>
-  <h1>البحث عن رابط قناة</h1>
-<form method="POST" action="/search">
-  <label for="channelName">اسم القناة:</label>
-  <input type="text" id="channelName" name="channelName" autocomplete="off" value="<%= query || '' %>">
-  <button type="submit">بحث</button>
-  <div id="suggestions" class="suggestions">
-    <% (suggestions || []).forEach(name => { %>
-      <div onclick="selectSuggestion('<%= name %>')"><%= name %></div>
-    <% }); %>
-  </div>
-</form>
-
-<% if (error) { %>
-  <p style="color: red;"><%= error %></p>
-<% } %>
-
-<% if (query && result) { %>
-  <table>
-    <thead>
-      <tr>
-        <th>اسم القناة</th>
-        <th>رابط القناة</th>
-        <th>نسخ</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= result.name %></td>
-        <td><a href="<%= result.url %>" target="_blank"><%= result.url %></a></td>
-        <td>
-          <button onclick="copyToClipboard('<%= result.url %>')">نسخ الرابط</button>
-          <button onclick="copyToClipboard('<%= result.name %>')">نسخ الاسم</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-<% } %>
 
   <script>
-    function selectSuggestion(name) {
-      document.getElementById("channelName").value = name;
-      document.getElementById("suggestions").innerHTML = "";
-    }
+    // دالة لنسخ النص إلى الحافظة باستخدام خاصية data-copy-text
+    function copyToClipboard(buttonId) {
+      const button = document.getElementById(buttonId);
+      if (!button) {
+        console.error('Button not found:', buttonId);
+        return;
+      }
 
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert("تم النسخ: " + text);
-      }).catch(err => {
-        console.error("خطأ أثناء النسخ:", err);
-      });
+      // قراءة النص مباشرة من خاصية البيانات في الزر
+      let textToCopy = button.getAttribute('data-copy-text');
+
+      if (!textToCopy) {
+        console.error('Text to copy not found in data attribute:', buttonId);
+        return;
+      }
+
+      // تنظيف النص من أي رموز HTML قد تكون تسربت من EJS (حماية إضافية)
+      textToCopy = textToCopy.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+      // 1. إنشاء عنصر مؤقت textarea
+      const tempTextarea = document.createElement('textarea');
+      tempTextarea.value = textToCopy;
+
+      // إخفاء العنصر المؤقت
+      tempTextarea.style.position = 'fixed';
+      tempTextarea.style.opacity = 0;
+      document.body.appendChild(tempTextarea);
+
+      // 2. تحديد النص
+      tempTextarea.select();
+
+      let success = false;
+      try {
+        // 3. تنفيذ أمر النسخ (ضروري لبيئات iframe)
+        success = document.execCommand('copy');
+      } catch (err) {
+        console.error('Copy failed (execCommand): ', err);
+      }
+
+      // 4. تنظيف العنصر المؤقت
+      document.body.removeChild(tempTextarea);
+
+      // 5. إعطاء تغذية راجعة للمستخدم
+      const originalText = button.textContent;
+      const originalColor = button.style.backgroundColor;
+
+      if (success) {
+        button.textContent = '✓ تم النسخ!';
+        button.style.backgroundColor = '#10b981'; /* أخضر للنجاح */
+      } else {
+        button.textContent = '❌ فشل النسخ';
+        button.style.backgroundColor = '#dc2626'; /* أحمر للفشل */
+      }
+
+      setTimeout(() => {
+        // استعادة النص الأصلي (باستخدام الدالة الموجودة في data-original-text)
+        const originalText = button.getAttribute('data-original-text');
+        button.textContent = originalText;
+        button.style.backgroundColor = originalColor;
+      }, 1500);
     }
   </script>
-    <script src="./tcheck.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>البحث عن القنوات الفضائية </h1>
+
+    <form action="/search" method="POST">
+      <div class="form-group">
+        <label for="channelName">اسم القناة:</label>
+        <input type="text" id="channelName" name="channelName" value="<%= query %>" placeholder="أدخل اسم القناة للبحث (مثل: الجزيرة)" autocomplete="off">
+      </div>
+      <button type="submit" class="submit-button">🔎 ابحث الآن</button>
+    </form>
+
+    <% if (error) {
+      %>
+      <p class="error">
+        🚨 <%= error %>
+      </p>
+      <%
+    } %>
+
+    <div class="results-section">
+      <h2>النتائج المطابقة (<%= results.length %>)</h2>
+
+      <% if (results && results.length > 0) {
+        %>
+        <p>
+          إليك القنوات التي تم العثور عليها بالتنسيق المطلوب:
+        </p>
+
+        <% results.forEach((item, index) => {
+          %>
+          <div class="channel-card">
+            <!-- اسم القناة -->
+            <h3 class="channel-name"><%= item.name %></h3>
+
+            <!-- الرابط المنسق -->
+            <div class="link-container">
+              <p class="link-label">
+                الرابط المنسق (URL|Metadata):
+              </p>
+              <div class="link-box">
+                <span class="formatted-link" id="link-<%= index %>"><%= item.formattedLink %></span>
+              </div>
+            </div>
+
+            <!-- أزرار النسخ -->
+            <div class="button-group">
+              <button
+                id="copy-link-<%= index %>"
+                class="copy-button primary"
+                data-copy-text="<%= item.formattedLink %>"
+                data-original-text="🔗 نسخ الرابط"
+                onclick="copyToClipboard('copy-link-<%= index %>')">
+                🔗 نسخ الرابط
+              </button>
+              <button
+                id="copy-name-<%= index %>"
+                class="copy-button secondary"
+                data-copy-text="<%= item.name %>"
+                data-original-text="📝 نسخ اسم القناة"
+                onclick="copyToClipboard('copy-name-<%= index %>')">
+                📝 نسخ اسم القناة
+              </button>
+            </div>
+          </div>
+          <%
+        }); %>
+        <%
+      } else if (!error && query) {
+        %>
+        <p>
+          😔 لم يتم العثور على أي نتائج للقناة: "<strong><%= query %></strong>".
+        </p>
+        <%
+      } else {
+        %>
+        <p>
+          ابدأ البحث في الأعلى لإظهار النتائج المفصلة هنا.
+        </p>
+        <%
+      } %>
+    </div>
+
+    <% if (suggestions && suggestions.length > 0) {
+      %>
+      <div class="suggestions-section">
+        <h3>اقتراحات 💡:</h3>
+        <ul style="list-style-type: disc; margin-right: 20px;">
+          <% suggestions.forEach(s => {
+            %>
+            <li><%= s %></li>
+            <%
+          }); %>
+        </ul>
+      </div>
+      <%
+    } %>
+  </div>
 </body>
 </html>
