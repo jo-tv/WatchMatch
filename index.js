@@ -450,7 +450,8 @@ function readChannels() {
 // عرض صفحة البحث
 app.get('/search', (req, res) => {
   res.render('search', {
-    result: null,
+    results: [], // ✅ يجب أن تكون نفس الاسم
+    jsonOutput: '[]', // ✅ حتى لا يعطي undefined
     query: '',
     error: null,
     suggestions: [],
@@ -461,6 +462,7 @@ app.get('/search', (req, res) => {
 app.post('/search', (req, res) => {
   const { channelName } = req.body;
 
+  // 🟡 الحالة 1: لم يُدخل المستخدم اسم القناة
   if (!channelName) {
     return res.render('search', {
       results: [],
@@ -474,46 +476,37 @@ app.post('/search', (req, res) => {
   const channels = readChannelsFromFile();
   const query = channelName.trim().toLowerCase();
 
-  // تصفية القنوات التي تتضمن اسم القناة في الاستعلام
+  // 🔍 البحث عن القنوات المطابقة
   const matchedChannels = channels.filter((channel) =>
     String(channel.name).toLowerCase().includes(query)
   );
 
+  // اقتراحات الأسماء المشابهة
   const suggestions = matchedChannels.map((channel) => channel.name);
 
   let detailedResults = [];
   let jsonOutputArray = [];
 
+  // 🟢 الحالة 2: توجد نتائج
   if (matchedChannels.length > 0) {
     detailedResults = matchedChannels.map((channel) => {
-      // توحيد وتنظيف جميع الأجزاء
       const urlPart = String(channel.url || '');
       const logoPart = `applogobr=${String(channel.applogobr || '')}`;
       const castValue = String(channel.cast || 'false');
       const castPart = `cast=${castValue}`;
 
-      // الحصول على الاسم وتنظيفه
       let channelNameDisplay = String(
         channel.description_name || channel.name || 'Untitled Channel'
-      );
-      channelNameDisplay = channelNameDisplay.replace(/[,"]/g, ''); // إزالة الفواصل والاقتباسات
+      ).replace(/[,"]/g, '');
 
       const namePart = `name=${channelNameDisplay}`;
 
-      // **تجميع الأجزاء**
       const parts = [urlPart].filter((p) => p);
       let formattedLinkRaw = parts.join('|');
-
-      // 🟢 تعديل الفاصلة بين الروابط
       formattedLinkRaw = formattedLinkRaw.replace(/,(?=https?:\/\/)/g, '","');
-
-      // 🟢 إضافة علامات اقتباس بدون JSON.stringify
       formattedLinkRaw = `"${formattedLinkRaw}"`;
 
-      // إضافة إلى المصفوفة
       jsonOutputArray.push(formattedLinkRaw);
-
-      // عرض فردي
       const formattedLinkForDisplay = `[${formattedLinkRaw}]`;
 
       return {
@@ -522,20 +515,19 @@ app.post('/search', (req, res) => {
       };
     });
 
-    // 🟢 الناتج الإجمالي بصيغة JSON حقيقية بدون backslashes
     const jsonOutput = `[${jsonOutputArray.join(',\n')}]`;
 
     return res.render('search', {
       results: detailedResults,
-      jsonOutput: jsonOutput,
+      jsonOutput,
       query: channelName,
       error: null,
       suggestions,
     });
   }
 
-  // إذا لم يتم العثور على أي قناة
-  res.render('search', {
+  // 🟥 الحالة 3: لا توجد نتائج (لكن المستخدم أدخل اسمًا)
+  return res.render('search', {
     results: [],
     jsonOutput: '[]',
     query: channelName,
