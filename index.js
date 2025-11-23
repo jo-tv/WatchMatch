@@ -114,28 +114,59 @@ async function readChannelsFromDatabase() {
 }
 
 function subtractOneHour(time) {
-  const [hours, minutes] = time.split(':').map((num) => parseInt(num, 10));
+  // نكتشف إذا الوقت يحتوي على AM أو PM
+  const ampmMatch = time.match(/\s?(AM|PM)$/i);
+  const ampm = ampmMatch ? ampmMatch[1].toUpperCase() : null;
 
-  const date = new Date();
-  date.setHours(hours, minutes, 0);
+  // إزالة AM/PM لتحويل الوقت إلى صيغة رقمية
+  const timeWithoutAmPm = time.replace(/\s?(AM|PM)$/i, '');
+  let [hours, minutes] = timeWithoutAmPm.split(':').map((num) => parseInt(num, 10));
 
-  if (isNaN(date.getTime())) {
+  if (isNaN(hours) || isNaN(minutes)) {
     console.error('Invalid time value:', time);
     return time; // إذا كانت القيمة غير صالحة، أعد الوقت الأصلي
   }
 
-  date.setHours(date.getHours() - 1); // إنقاص ساعة
+  // تحويل الوقت إلى صيغة 24 ساعة إذا كان PM
+  if (ampm === 'PM' && hours < 12) hours += 12;
+  if (ampm === 'AM' && hours === 12) hours = 0;
 
-  const updatedHours = String(date.getHours()).padStart(2, '0');
-  const updatedMinutes = String(date.getMinutes()).padStart(2, '0');
+  // إنقاص ساعة
+  hours -= 2;
+  if (hours < 0) hours += 24; // ضبط اليوم السابق إذا قلنا عن 0
 
-  return `${updatedHours}:${updatedMinutes}`; // إعادة الوقت بالتنسيق HH:MM
+  // إعادة تحويل الوقت إلى صيغة AM/PM إذا كانت موجودة
+  let updatedAmPm = ampm;
+  let displayHours = hours;
+
+  if (ampm) {
+    if (hours === 0) {
+      displayHours = 12;
+      updatedAmPm = 'AM';
+    } else if (hours < 12) {
+      displayHours = hours;
+      updatedAmPm = 'AM';
+    } else if (hours === 12) {
+      displayHours = 12;
+      updatedAmPm = 'PM';
+    } else {
+      displayHours = hours - 12;
+      updatedAmPm = 'PM';
+    }
+  }
+
+  const updatedHours = String(displayHours).padStart(2, '0');
+  const updatedMinutes = String(minutes).padStart(2, '0');
+
+  return updatedAmPm
+    ? `${updatedHours}:${updatedMinutes} ${updatedAmPm}`
+    : `${updatedHours}:${updatedMinutes}`;
 }
 
 // دالة لجلب المباريات وحفظها في قاعدة البيانات
 async function fetchMatches() {
   try {
-    const { data } = await axios.get('https://www.livematch-tv.com/');
+    const { data } = await axios.get('https://www.kora-live.im/home_2/');
     const $ = require('cheerio').load(data);
 
     const matches = [];
@@ -154,7 +185,7 @@ async function fetchMatches() {
 
       // تقليص ساعة من الوقت (إذا كان الوقت متاحًا)
       const updatedTime = time ? subtractOneHour(time) : time;
-
+      console.log(updatedTime);
       matches.push({
         team1,
         team2,
@@ -299,18 +330,29 @@ const updateMatchStatuses = async () => {
     for (const match of matches) {
       let newStatus;
       const todayDate = moment().format('YYYY-MM-DD');
-      const matchTimeString = `${todayDate}T${match.time}`;
-      let matchTime = moment(matchTimeString);
+
+      let matchTime24; // الوقت بعد التحويل إلى 24 ساعة
+
+      if (/pm/i.test(match.time)) {
+        // تحويل PM إلى 24 ساعة
+        matchTime24 = moment(match.time, 'hh:mm A').format('HH:mm');
+      } else {
+        // AM أو بدون AM/PM نتركه كما هو
+        matchTime24 = moment(match.time, 'hh:mm A').format('HH:mm');
+      }
+
+      const matchTimeString = `${todayDate}T${matchTime24}`;
+      let matchTime = moment(matchTimeString, 'YYYY-MM-DDTHH:mm');
+
+      if (!matchTime.isValid()) {
+        console.warn(`Invalid match.time for match ${match._id}. Skipping...`);
+        continue;
+      }
 
       if (matchTime.isBefore(now, 'minute') && matchTime.isSame(now, 'day')) {
         console.log(`Match ${match._id} is still today.`);
       } else if (matchTime.isBefore(now)) {
         matchTime = matchTime.add(1, 'day');
-      }
-
-      if (!matchTime.isValid()) {
-        console.warn(`Invalid match.time for match ${match._id}. Skipping...`);
-        continue;
       }
 
       const timeDifference = matchTime.diff(now, 'milliseconds');
@@ -334,16 +376,15 @@ const updateMatchStatuses = async () => {
       }
     }
 
+    // فرز المباريات حسب الحالة والوقت
     const sortedMatches = matches.sort((a, b) => {
       if (a.status === 'انتهت' && b.status !== 'انتهت') return 1;
       if (a.status !== 'انتهت' && b.status === 'انتهت') return -1;
 
-      const timeA = moment(a.time, 'HH:mm');
-      const timeB = moment(b.time, 'HH:mm');
-      return timeA.diff(timeB);
+      const timeA = moment(a.time, 'hh:mm A').format('HH:mm');
+      const timeB = moment(b.time, 'hh:mm A').format('HH:mm');
+      return moment(timeA, 'HH:mm').diff(moment(timeB, 'HH:mm'));
     });
-
-    console.log('Sorted Matches:', sortedMatches);
 
     const bulkOperations = sortedMatches.map((match, index) => ({
       updateOne: {
@@ -352,15 +393,9 @@ const updateMatchStatuses = async () => {
       },
     }));
 
-    console.log('Prepared bulk operations:', bulkOperations);
-
     await Match.bulkWrite(bulkOperations)
-      .then((result) => {
-        console.log(`Updated ${result.modifiedCount} matches.`);
-      })
-      .catch((err) => {
-        console.error('Error in bulk update:', err.message);
-      });
+      .then((result) => console.log(`Updated ${result.modifiedCount} matches.`))
+      .catch((err) => console.error('Error in bulk update:', err.message));
 
     console.log('All match statuses and order updated successfully.');
   } catch (error) {
