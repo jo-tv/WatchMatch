@@ -137,7 +137,7 @@ function subtractOneHour(time) {
   if (ampm === "AM" && hours === 12) hours = 0;
 
   // إنقاص ساعة
-  hours -= 2;
+  hours -= 3;
   if (hours < 0) hours += 12; // ضبط اليوم السابق إذا قلنا عن 0
 
   // إعادة تحويل الوقت إلى صيغة AM/PM إذا كانت موجودة
