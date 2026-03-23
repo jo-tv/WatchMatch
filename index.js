@@ -376,7 +376,8 @@ const updateMatchStatuses = async () => {
     }
 
     // توحيد التوقيت (اختر واحدة: utc أو local)
-    const now = moment().utc(); 
+    
+    const now = moment().utc().add(1, 'hour');
 
     for (const match of matches) {
       const todayDate = moment().utc().format("YYYY-MM-DD");
@@ -400,6 +401,7 @@ const updateMatchStatuses = async () => {
 
       const timeDiff = matchTime.diff(now, "milliseconds");
       let newStatus;
+      
 
       if (timeDiff > 15 * 60 * 1000) {
         newStatus = "لم تبدأ";
