@@ -137,7 +137,7 @@ function subtractOneHour(time) {
   if (ampm === "AM" && hours === 12) hours = 0;
 
   // إنقاص ساعة
-  hours -= 3;
+  hours -= 2;
   if (hours < 0) hours += 12; // ضبط اليوم السابق إذا قلنا عن 0
 
   // إعادة تحويل الوقت إلى صيغة AM/PM إذا كانت موجودة
@@ -404,7 +404,7 @@ const updateMatchStatuses = async () => {
       if (timeDiff > 15 * 60 * 1000) {
         newStatus = "لم تبدأ";
       } 
-      else if (timeDiff >= 0 && timeDiff <= 15 * 60 * 1000) {
+      else if ( timeDiff <= 15 * 60 * 1000 && timeDiff >= 0) {
         newStatus = "ستبدأ بعد قليل"; // ✅ هذا هو الإصلاح الرئيسي
       } 
       else if (timeDiff < 0 && Math.abs(timeDiff) <= 2 * 60 * 60 * 1000) {
